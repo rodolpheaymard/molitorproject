@@ -1,0 +1,25 @@
+.App {
+    text-align: center;  
+}
+
+.MgHeader {
+  text-align: center;
+  padding: 5px 5px 5px 5px
+}
+
+.MgLogo {
+    width:50px;
+    height:40px;
+}
+  
+.MgLogoTitle {
+    vertical-align: bottom;
+  }
+  
+.MgFooter {
+  color: white;
+  background-color: black;
+  text-align: left;
+  padding: 5px 5px 5px 5px
+}
+  

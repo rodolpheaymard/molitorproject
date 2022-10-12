@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import './assets/css/Mg.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import  { MgHomePage } from './components/MgHomePage';
+import  { MgExhibitionPage } from './components/MgExhibitionPage';
+import  { MgArtistsListPage } from './components/MgArtistsListPage';
+import  { MgWorkOfArtListPage } from './components/MgWorkOfArtListPage';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <Routes>
+      <Route path="/" element={<MgHomePage/>} />
+      <Route path="/home" element={<MgHomePage/>} />
+      <Route path="/exhibition" element={<MgExhibitionPage/>} />
+      <Route path="/artists" element={<MgArtistsListPage/>} />
+      <Route path="/workofart" element={<MgWorkOfArtListPage/>} />
+     </Routes>
+    </Router> );
 }
 
 export default App;
