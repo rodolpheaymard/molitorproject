@@ -1,7 +1,7 @@
 import React from 'react';
-import { Typography } from 'antd';
+//import { Typography } from 'antd';
 //import { Col, Row } from 'antd';
-const { Title } = Typography;
+//const { Title } = Typography;
 
 export const appendScript = (scriptToAppend) => {
   const script = document.createElement("script");
@@ -21,7 +21,7 @@ export class MgExhibitionPage extends React.Component {
   render() {
     return ( <>       
                <div className="MgExhibitionPlayer" id="mgPlayer">     
-               <img className="MgExhibitionPlayerImage"  id="mgPlayerImage" />
+               <img className="MgExhibitionPlayerImage"  id="mgPlayerImage" alt="work of art currently on air"/>
                <div className="MgExhibitionPlayerStart" id="mgPlayerOverlay">
                 press anywhere to go full screen</div> 
                </div>
