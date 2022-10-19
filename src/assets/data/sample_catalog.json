@@ -1,0 +1,925 @@
+{
+  "id": "molitor",
+  "type": "catalog",
+  "version": "1.2",
+  "products": [
+    {
+      "id": "prd-000001",
+      "type": "product",
+      "title": "The Persistence of Memory",
+      "author_id": "art-salvadordali",
+      "category": "Paintings"
+    },
+    {
+      "id": "prd-000002",
+      "type": "product",
+      "title": "The Temptation of Saint Anthony",
+      "author_id": "art-salvadordali",
+      "category": "Paintings"
+    },
+    {
+      "id": "prd-000003",
+      "type": "product",
+      "title": "Annunciation",
+      "author_id": "art-leonardodavinci",
+      "category": "Paintings"
+    },
+    {
+      "id": "prd-000004",
+      "type": "product",
+      "title": "Perspective",
+      "author_id": "art-leonardodavinci",
+      "category": "Paintings"
+    },
+    {
+      "id": "prd-000005",
+      "type": "product",
+      "title": "The Vitruvian Man",
+      "author_id": "art-leonardodavinci",
+      "category": "Paintings"
+    },
+    {
+      "id": "prd-000006",
+      "type": "product",
+      "title": "Number 11",
+      "author_id": "art-jacksonpollock",
+      "category": "Paintings"
+    },
+    {
+      "id": "prd-000007",
+      "type": "product",
+      "title": "Full Fathom 5",
+      "author_id": "art-jacksonpollock",
+      "category": "Paintings"
+    },
+    {
+      "id": "prd-000008",
+      "type": "product",
+      "title": "Convergence",
+      "author_id": "art-jacksonpollock",
+      "category": "Paintings"
+    },
+    {
+      "id": "prd-000009",
+      "type": "product",
+      "title": "No Name",
+      "author_id": "art-unknown",
+      "category": "Paintings"
+    },
+    {
+      "id": "prd-000010",
+      "type": "product",
+      "title": "No Name",
+      "author_id": "art-unknown",
+      "category": "Paintings"
+    },
+    {
+      "id": "prd-000011",
+      "type": "product",
+      "title": "No Name",
+      "author_id": "art-unknown",
+      "category": "Paintings"
+    }
+  ],
+  "variants": [
+    {
+      "id": "var-000000100",
+      "type": "variant",
+      "product_id": "prd-000001",
+      "product_type": "physical",
+      "physical_size": "",
+      "price_amount": "",
+      "price_currency": ""
+    },
+    {
+      "id": "var-000000101",
+      "type": "variant",
+      "product_id": "prd-000001",
+      "product_type": "digital",
+      "physical_size": "",
+      "price_amount": "",
+      "price_currency": ""
+    },
+    {
+      "id": "var-000000200",
+      "type": "variant",
+      "product_id": "prd-000002",
+      "product_type": "physical",
+      "physical_size": "",
+      "price_amount": "",
+      "price_currency": ""
+    },
+    {
+      "id": "var-000000201",
+      "type": "variant",
+      "product_id": "prd-000002",
+      "product_type": "physical",
+      "physical_size": "",
+      "price_amount": "",
+      "price_currency": ""
+    },
+    {
+      "id": "var-000000202",
+      "type": "variant",
+      "product_id": "prd-000002",
+      "product_type": "physical",
+      "physical_size": "",
+      "price_amount": "",
+      "price_currency": ""
+    },
+    {
+      "id": "var-000000300",
+      "type": "variant",
+      "product_id": "prd-000003",
+      "product_type": "physical",
+      "physical_size": "",
+      "price_amount": "",
+      "price_currency": ""
+    },
+    {
+      "id": "var-000000400",
+      "type": "variant",
+      "product_id": "prd-000004",
+      "product_type": "physical",
+      "physical_size": "",
+      "price_amount": "",
+      "price_currency": ""
+    },
+    {
+      "id": "var-000000500",
+      "type": "variant",
+      "product_id": "prd-000005",
+      "product_type": "physical",
+      "physical_size": "",
+      "price_amount": "",
+      "price_currency": ""
+    },
+    {
+      "id": "var-000000600",
+      "type": "variant",
+      "product_id": "prd-000006",
+      "product_type": "physical",
+      "physical_size": "",
+      "price_amount": "",
+      "price_currency": ""
+    },
+    {
+      "id": "var-000000700",
+      "type": "variant",
+      "product_id": "prd-000007",
+      "product_type": "physical",
+      "physical_size": "",
+      "price_amount": "",
+      "price_currency": ""
+    },
+    {
+      "id": "var-000000800",
+      "type": "variant",
+      "product_id": "prd-000008",
+      "product_type": "physical",
+      "physical_size": "",
+      "price_amount": "",
+      "price_currency": ""
+    },
+    {
+      "id": "var-000000900",
+      "type": "variant",
+      "product_id": "prd-000009",
+      "product_type": "digital",
+      "physical_size": "",
+      "price_amount": "",
+      "price_currency": ""
+    },
+    {
+      "id": "var-000001000",
+      "type": "variant",
+      "product_id": "prd-000010",
+      "product_type": "digital",
+      "physical_size": "",
+      "price_amount": "",
+      "price_currency": ""
+    },
+    {
+      "id": "var-000001100",
+      "type": "variant",
+      "product_id": "prd-000011",
+      "product_type": "digital",
+      "physical_size": "",
+      "price_amount": "",
+      "price_currency": ""
+    }
+  ],
+  "product_images": [
+    {
+      "id": "imgprd-000001-a",
+      "type": "product_image",
+      "product_id": "prd-000001",
+      "image_type": "",
+      "image_path": "artworks",
+      "image_file": "dali-the-persistence-of-memory.jpg",
+      "alt_text": "this is a piece of Art"
+    },
+    {
+      "id": "imgprd-000001-b",
+      "type": "product_image",
+      "product_id": "prd-000001",
+      "image_type": "",
+      "image_path": "artworks",
+      "image_file": "dali-the-persistence-of-memory.jpg",
+      "alt_text": "this is a piece of Art"
+    },
+    {
+      "id": "imgprd-000001-c",
+      "type": "product_image",
+      "product_id": "prd-000001",
+      "image_type": "",
+      "image_path": "artworks",
+      "image_file": "dali-the-persistence-of-memory.jpg",
+      "alt_text": "this is a piece of Art"
+    },
+    {
+      "id": "imgprd-000001-d",
+      "type": "product_image",
+      "product_id": "prd-000001",
+      "image_type": "",
+      "image_path": "artworks",
+      "image_file": "dali-the-persistence-of-memory.jpg",
+      "alt_text": "this is a piece of Art"
+    },
+    {
+      "id": "imgprd-000002-a",
+      "type": "product_image",
+      "product_id": "prd-000002",
+      "image_type": "",
+      "image_path": "artworks",
+      "image_file": "dali-the-temptation-of-st-anthony.jpg",
+      "alt_text": "this is a piece of Art"
+    },
+    {
+      "id": "imgprd-000002-b",
+      "type": "product_image",
+      "product_id": "prd-000002",
+      "image_type": "",
+      "image_path": "artworks",
+      "image_file": "dali-the-temptation-of-st-anthony.jpg",
+      "alt_text": "this is a piece of Art"
+    },
+    {
+      "id": "imgprd-000002-c",
+      "type": "product_image",
+      "product_id": "prd-000002",
+      "image_type": "",
+      "image_path": "artworks",
+      "image_file": "dali-the-temptation-of-st-anthony.jpg",
+      "alt_text": "this is a piece of Art"
+    },
+    {
+      "id": "imgprd-000003-a",
+      "type": "product_image",
+      "product_id": "prd-000003",
+      "image_type": "",
+      "image_path": "artworks",
+      "image_file": "davinci-annunciation.jpg",
+      "alt_text": "this is a piece of Art"
+    },
+    {
+      "id": "imgprd-000003-b",
+      "type": "product_image",
+      "product_id": "prd-000003",
+      "image_type": "",
+      "image_path": "artworks",
+      "image_file": "davinci-annunciation.jpg",
+      "alt_text": "this is a piece of Art"
+    },
+    {
+      "id": "imgprd-000003-c",
+      "type": "product_image",
+      "product_id": "prd-000003",
+      "image_type": "",
+      "image_path": "artworks",
+      "image_file": "davinci-annunciation.jpg",
+      "alt_text": "this is a piece of Art"
+    },
+    {
+      "id": "imgprd-000004-a",
+      "type": "product_image",
+      "product_id": "prd-000004",
+      "image_type": "",
+      "image_path": "artworks",
+      "image_file": "davinci-perspective.jpg",
+      "alt_text": "this is a piece of Art"
+    },
+    {
+      "id": "imgprd-000004-b",
+      "type": "product_image",
+      "product_id": "prd-000004",
+      "image_type": "",
+      "image_path": "artworks",
+      "image_file": "davinci-perspective.jpg",
+      "alt_text": "this is a piece of Art"
+    },
+    {
+      "id": "imgprd-000004-c",
+      "type": "product_image",
+      "product_id": "prd-000004",
+      "image_type": "",
+      "image_path": "artworks",
+      "image_file": "davinci-perspective.jpg",
+      "alt_text": "this is a piece of Art"
+    },
+    {
+      "id": "imgprd-000005-a",
+      "type": "product_image",
+      "product_id": "prd-000005",
+      "image_type": "",
+      "image_path": "artworks",
+      "image_file": "davinci-vitruvian-man.jpg",
+      "alt_text": "this is a piece of Art"
+    },
+    {
+      "id": "imgprd-000005-b",
+      "type": "product_image",
+      "product_id": "prd-000005",
+      "image_type": "",
+      "image_path": "artworks",
+      "image_file": "davinci-vitruvian-man.jpg",
+      "alt_text": "this is a piece of Art"
+    },
+    {
+      "id": "imgprd-000005-c",
+      "type": "product_image",
+      "product_id": "prd-000005",
+      "image_type": "",
+      "image_path": "artworks",
+      "image_file": "davinci-vitruvian-man.jpg",
+      "alt_text": "this is a piece of Art"
+    },
+    {
+      "id": "imgprd-000006-a",
+      "type": "product_image",
+      "product_id": "prd-000006",
+      "image_type": "",
+      "image_path": "artworks",
+      "image_file": "pollock-convergence.jpg",
+      "alt_text": "this is a piece of Art"
+    },
+    {
+      "id": "imgprd-000006-b",
+      "type": "product_image",
+      "product_id": "prd-000006",
+      "image_type": "",
+      "image_path": "artworks",
+      "image_file": "pollock-convergence.jpg",
+      "alt_text": "this is a piece of Art"
+    },
+    {
+      "id": "imgprd-000006-c",
+      "type": "product_image",
+      "product_id": "prd-000006",
+      "image_type": "",
+      "image_path": "artworks",
+      "image_file": "pollock-convergence.jpg",
+      "alt_text": "this is a piece of Art"
+    },
+    {
+      "id": "imgprd-000007-a",
+      "type": "product_image",
+      "product_id": "prd-000007",
+      "image_type": "",
+      "image_path": "artworks",
+      "image_file": "pollock-full-fathom-5.jpg",
+      "alt_text": "this is a piece of Art"
+    },
+    {
+      "id": "imgprd-000007-b",
+      "type": "product_image",
+      "product_id": "prd-000007",
+      "image_type": "",
+      "image_path": "artworks",
+      "image_file": "pollock-full-fathom-5.jpg",
+      "alt_text": "this is a piece of Art"
+    },
+    {
+      "id": "imgprd-000007-c",
+      "type": "product_image",
+      "product_id": "prd-000007",
+      "image_type": "",
+      "image_path": "artworks",
+      "image_file": "pollock-full-fathom-5.jpg",
+      "alt_text": "this is a piece of Art"
+    },
+    {
+      "id": "imgprd-000008-a",
+      "type": "product_image",
+      "product_id": "prd-000008",
+      "image_type": "",
+      "image_path": "artworks",
+      "image_file": "pollock-number11.jpg",
+      "alt_text": "this is a piece of Art"
+    },
+    {
+      "id": "imgprd-000008-b",
+      "type": "product_image",
+      "product_id": "prd-000008",
+      "image_type": "",
+      "image_path": "artworks",
+      "image_file": "pollock-number11.jpg",
+      "alt_text": "this is a piece of Art"
+    },
+    {
+      "id": "imgprd-000008-c",
+      "type": "product_image",
+      "product_id": "prd-000008",
+      "image_type": "",
+      "image_path": "artworks",
+      "image_file": "pollock-number11.jpg",
+      "alt_text": "this is a piece of Art"
+    },
+    {
+      "id": "imgprd-000009-a",
+      "type": "product_image",
+      "product_id": "prd-000009",
+      "image_type": "",
+      "image_path": "artworks",
+      "image_file": "empty-image.jpg",
+      "alt_text": "this is a piece of Art"
+    },
+    {
+      "id": "imgprd-000009-b",
+      "type": "product_image",
+      "product_id": "prd-000009",
+      "image_type": "",
+      "image_path": "artworks",
+      "image_file": "empty-image.jpg",
+      "alt_text": "this is a piece of Art"
+    },
+    {
+      "id": "imgprd-000009-c",
+      "type": "product_image",
+      "product_id": "prd-000009",
+      "image_type": "",
+      "image_path": "artworks",
+      "image_file": "empty-image.jpg",
+      "alt_text": "this is a piece of Art"
+    },
+    {
+      "id": "imgprd-000010-a",
+      "type": "product_image",
+      "product_id": "prd-000010",
+      "image_type": "",
+      "image_path": "artworks",
+      "image_file": "empty-image.jpg",
+      "alt_text": "this is a piece of Art"
+    },
+    {
+      "id": "imgprd-000010-b",
+      "type": "product_image",
+      "product_id": "prd-000010",
+      "image_type": "",
+      "image_path": "artworks",
+      "image_file": "empty-image.jpg",
+      "alt_text": "this is a piece of Art"
+    },
+    {
+      "id": "imgprd-000010-c",
+      "type": "product_image",
+      "product_id": "prd-000010",
+      "image_type": "",
+      "image_path": "artworks",
+      "image_file": "empty-image.jpg",
+      "alt_text": "this is a piece of Art"
+    },
+    {
+      "id": "imgprd-000011-a",
+      "type": "product_image",
+      "product_id": "prd-000011",
+      "image_type": "",
+      "image_path": "artworks",
+      "image_file": "empty-image.jpg",
+      "alt_text": "this is a piece of Art"
+    },
+    {
+      "id": "imgprd-000011-b",
+      "type": "product_image",
+      "product_id": "prd-000011",
+      "image_type": "",
+      "image_path": "artworks",
+      "image_file": "empty-image.jpg",
+      "alt_text": "this is a piece of Art"
+    },
+    {
+      "id": "imgprd-000011-c",
+      "type": "product_image",
+      "product_id": "prd-000011",
+      "image_type": "",
+      "image_path": "artworks",
+      "image_file": "empty-image.jpg",
+      "alt_text": "this is a piece of Art"
+    }
+  ],
+  "contents": [
+    {
+      "id": "cnt-00000001",
+      "type": "content",
+      "product_id": "",
+      "image_url": "",
+      "text": ""
+    },
+    {
+      "id": "cnt-00000002",
+      "type": "content",
+      "product_id": "",
+      "image_url": "",
+      "text": "ceci est un \"test\""
+    },
+    {
+      "id": "cnt-00000003",
+      "type": "content",
+      "product_id": "",
+      "image_url": "",
+      "text": "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker."
+    },
+    {
+      "id": "cnt-00000004",
+      "type": "content",
+      "product_id": "",
+      "image_url": "",
+      "text": ""
+    },
+    {
+      "id": "cnt-00000005",
+      "type": "content",
+      "product_id": "",
+      "image_url": "",
+      "text": ""
+    },
+    {
+      "id": "cnt-00000006",
+      "type": "content",
+      "product_id": "",
+      "image_url": "",
+      "text": ""
+    },
+    {
+      "id": "cnt-00000007",
+      "type": "content",
+      "product_id": "",
+      "image_url": "",
+      "text": ""
+    },
+    {
+      "id": "cnt-00000008",
+      "type": "content",
+      "product_id": "",
+      "image_url": "",
+      "text": ""
+    },
+    {
+      "id": "cnt-00000009",
+      "type": "content",
+      "product_id": "",
+      "image_url": "",
+      "text": ""
+    },
+    {
+      "id": "cnt-00000010",
+      "type": "content",
+      "product_id": "",
+      "image_url": "",
+      "text": ""
+    },
+    {
+      "id": "cnt-00000011",
+      "type": "content",
+      "product_id": "",
+      "image_url": "",
+      "text": ""
+    }
+  ],
+  "artists": [
+    {
+      "id": "art-leonardodavinci",
+      "type": "artist",
+      "first_name": "Leonardo",
+      "last_name": "da Vinci",
+      "country": "Italy",
+      "address1": "…",
+      "address2": "…",
+      "zipcode": "…",
+      "city": "Vinci",
+      "state": "",
+      "short_description": ""
+    },
+    {
+      "id": "art-salvadordali",
+      "type": "artist",
+      "first_name": "Salvador",
+      "last_name": "Dali",
+      "country": "Spain",
+      "address1": "…",
+      "address2": "…",
+      "zipcode": "…",
+      "city": "Port Lligat",
+      "state": "",
+      "short_description": ""
+    },
+    {
+      "id": "art-jacksonpollock",
+      "type": "artist",
+      "first_name": "Jackson",
+      "last_name": "Pollock",
+      "country": "USA",
+      "address1": "…",
+      "address2": "…",
+      "zipcode": "…",
+      "city": "Springs, Hamptons",
+      "state": "",
+      "short_description": "harmful"
+    }
+  ],
+  "contents_lists": [
+    {
+      "id": "home",
+      "type": "collection",
+      "title": "Home"
+    },
+    {
+      "id": "italy",
+      "type": "collection",
+      "title": "Italy"
+    },
+    {
+      "id": "weird",
+      "type": "collection",
+      "title": "Weird Digital Art"
+    },
+    {
+      "id": "travel-thru-art",
+      "type": "exhibition",
+      "title": "A Travel through Art Creation"
+    },
+    {
+      "id": "discovering-vinci",
+      "type": "exhibition",
+      "title": "Discovering Leonardo da Vinci"
+    }
+  ],
+  "collection_details": [
+    {
+      "id": "collection_home.1",
+      "type": "collection_detail",
+      "contents_list_id": "home",
+      "order": "1",
+      "product_id": "prd-000001",
+      "text": ""
+    },
+    {
+      "id": "collection_home.2",
+      "type": "collection_detail",
+      "contents_list_id": "home",
+      "order": "2",
+      "product_id": "prd-000005",
+      "text": ""
+    },
+    {
+      "id": "collection_home.3",
+      "type": "collection_detail",
+      "contents_list_id": "home",
+      "order": "3",
+      "product_id": "prd-000004",
+      "text": ""
+    },
+    {
+      "id": "collection_home.4",
+      "type": "collection_detail",
+      "contents_list_id": "home",
+      "order": "4",
+      "product_id": "prd-000002",
+      "text": ""
+    },
+    {
+      "id": "collection_home.5",
+      "type": "collection_detail",
+      "contents_list_id": "home",
+      "order": "5",
+      "product_id": "prd-000007",
+      "text": ""
+    },
+    {
+      "id": "collection_home.6",
+      "type": "collection_detail",
+      "contents_list_id": "home",
+      "order": "6",
+      "product_id": "prd-000006",
+      "text": ""
+    },
+    {
+      "id": "collection_italy.1",
+      "type": "collection_detail",
+      "contents_list_id": "italy",
+      "order": "1",
+      "product_id": "prd-000005",
+      "text": ""
+    },
+    {
+      "id": "collection_italy.2",
+      "type": "collection_detail",
+      "contents_list_id": "italy",
+      "order": "2",
+      "product_id": "prd-000003",
+      "text": ""
+    },
+    {
+      "id": "collection_italy.3",
+      "type": "collection_detail",
+      "contents_list_id": "italy",
+      "order": "3",
+      "product_id": "prd-000004",
+      "text": ""
+    },
+    {
+      "id": "collection_italy.4",
+      "type": "collection_detail",
+      "contents_list_id": "italy",
+      "order": "4",
+      "product_id": "prd-000005",
+      "text": ""
+    },
+    {
+      "id": "collection_italy.5",
+      "type": "collection_detail",
+      "contents_list_id": "italy",
+      "order": "5",
+      "product_id": "prd-000003",
+      "text": ""
+    },
+    {
+      "id": "collection_italy.6",
+      "type": "collection_detail",
+      "contents_list_id": "italy",
+      "order": "6",
+      "product_id": "prd-000004",
+      "text": ""
+    },
+    {
+      "id": "collection_italy.7",
+      "type": "collection_detail",
+      "contents_list_id": "italy",
+      "order": "7",
+      "product_id": "prd-000005",
+      "text": ""
+    }
+  ],
+  "exhibition_steps": [
+    {
+      "id": "travel-thru-art.1",
+      "type": "exhibition_step",
+      "exhibition_id": "travel-thru-art",
+      "order": "1",
+      "content_id": "",
+      "duration": "3",
+      "text_before": "",
+      "text_after": ""
+    },
+    {
+      "id": "travel-thru-art.2",
+      "type": "exhibition_step",
+      "exhibition_id": "travel-thru-art",
+      "order": "2",
+      "content_id": "",
+      "duration": "5",
+      "text_before": "",
+      "text_after": ""
+    },
+    {
+      "id": "travel-thru-art.3",
+      "type": "exhibition_step",
+      "exhibition_id": "travel-thru-art",
+      "order": "3",
+      "content_id": "",
+      "duration": "4",
+      "text_before": "",
+      "text_after": ""
+    },
+    {
+      "id": "travel-thru-art.4",
+      "type": "exhibition_step",
+      "exhibition_id": "travel-thru-art",
+      "order": "4",
+      "content_id": "",
+      "duration": "4",
+      "text_before": "",
+      "text_after": ""
+    },
+    {
+      "id": "travel-thru-art.5",
+      "type": "exhibition_step",
+      "exhibition_id": "travel-thru-art",
+      "order": "5",
+      "content_id": "",
+      "duration": "10",
+      "text_before": "This is a great painting",
+      "text_after": "I told you it was great"
+    },
+    {
+      "id": "travel-thru-art.6",
+      "type": "exhibition_step",
+      "exhibition_id": "travel-thru-art",
+      "order": "6",
+      "content_id": "",
+      "duration": "5",
+      "text_before": "",
+      "text_after": ""
+    },
+    {
+      "id": "travel-thru-art.7",
+      "type": "exhibition_step",
+      "exhibition_id": "travel-thru-art",
+      "order": "7",
+      "content_id": "",
+      "duration": "5",
+      "text_before": "",
+      "text_after": ""
+    },
+    {
+      "id": "discovering-vinci.1",
+      "type": "exhibition_step",
+      "exhibition_id": "discovering-vinci",
+      "order": "1",
+      "content_id": "",
+      "duration": "5",
+      "text_before": "",
+      "text_after": ""
+    },
+    {
+      "id": "discovering-vinci.2",
+      "type": "exhibition_step",
+      "exhibition_id": "discovering-vinci",
+      "order": "2",
+      "content_id": "",
+      "duration": "5",
+      "text_before": "",
+      "text_after": ""
+    },
+    {
+      "id": "discovering-vinci.3",
+      "type": "exhibition_step",
+      "exhibition_id": "discovering-vinci",
+      "order": "3",
+      "content_id": "",
+      "duration": "5",
+      "text_before": "",
+      "text_after": ""
+    },
+    {
+      "id": "discovering-vinci.4",
+      "type": "exhibition_step",
+      "exhibition_id": "discovering-vinci",
+      "order": "4",
+      "content_id": "",
+      "duration": "5",
+      "text_before": "",
+      "text_after": ""
+    },
+    {
+      "id": "discovering-vinci.5",
+      "type": "exhibition_step",
+      "exhibition_id": "discovering-vinci",
+      "order": "5",
+      "content_id": "",
+      "duration": "5",
+      "text_before": "",
+      "text_after": ""
+    },
+    {
+      "id": "discovering-vinci.6",
+      "type": "exhibition_step",
+      "exhibition_id": "discovering-vinci",
+      "order": "6",
+      "content_id": "",
+      "duration": "5",
+      "text_before": "",
+      "text_after": ""
+    },
+    {
+      "id": "discovering-vinci.7",
+      "type": "exhibition_step",
+      "exhibition_id": "discovering-vinci",
+      "order": "7",
+      "content_id": "",
+      "duration": "5",
+      "text_before": "",
+      "text_after": ""
+    },
+    {
+      "id": "discovering-vinci.8",
+      "type": "exhibition_step",
+      "exhibition_id": "discovering-vinci",
+      "order": "8",
+      "content_id": "",
+      "duration": "5",
+      "text_before": "",
+      "text_after": ""
+    }
+  ]
+}

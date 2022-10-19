@@ -2,6 +2,22 @@
     text-align: center;  
 }
 
+
+
+.MgHorizontal {
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+}
+
+
+.MgVertical {    
+  display: flex;
+  flex-direction: column;
+  width: "100%";
+  align-items: center;
+}
+
 .MgHeader {
   text-align: center;
   padding: 5px 5px 5px 5px
@@ -51,4 +67,17 @@
   cursor: pointer;
   color: white;
   text-align: center;
+}
+
+.MgProductBlock {
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */  
+  padding: 30px 30px 30px 30px ;
+}
+
+.MgProductBlock img {
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
 }
