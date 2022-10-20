@@ -3,19 +3,27 @@
 }
 
 
-
 .MgHorizontal {
   display:flex;
   flex-direction:row;
   justify-content:space-between;
 }
 
-
 .MgVertical {    
   display: flex;
   flex-direction: column;
   width: "100%";
   align-items: center;
+}
+
+.MgAlignLeft {
+  text-align: left;  
+  align-items: left;
+}
+
+.MgAlignRight {
+  text-align: right; 
+  align-items: right;
 }
 
 .MgHeader {
@@ -77,12 +85,18 @@
 .MgProductBlock {
   display: flex;
   justify-content: center; /* align horizontal */
-  align-items: center; /* align vertical */  
-  padding: 30px 30px 30px 30px ;
+  align-items: flex-start; /* align vertical */  
+  padding: 40px 40px 40px 40px ;
 }
 
 .MgProductBlock img {
-  width: 100%;
-  height: 400px;
+  width:100%;
   object-fit: contain;
+}
+
+.MgLegend {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 5px 5px 5px 5px
 }

@@ -1,6 +1,6 @@
 import { MtIsNotNull,MtToArray } from "../utils/MtTools";
 import { Me } from "./Me";
-import { MeProductImage } from "./MeProductImage";
+import { MeMedia } from "./MeMedia";
 
 export class MeProduct extends Me
 {
@@ -8,17 +8,17 @@ export class MeProduct extends Me
    {  
     super(id);
     this.variants = {};
-    this.product_images = {};
+    this.medias = {};
    }
    
-   GetImageUrl()
+   GetMediaUrl()
    {
-      let result = MeProductImage.GetDefaultImageUrl();
+      let result = MeMedia.GetDefaultImageUrl();
 
-      let imgs = MtToArray(this.product_images);
+      let imgs = MtToArray(this.medias);
       if (MtIsNotNull(imgs) && imgs.length > 0 )
       {         
-         result = imgs[0].GetImageUrl();
+         result = imgs[0].GetMediaUrl();
       }
       return result;      
    }

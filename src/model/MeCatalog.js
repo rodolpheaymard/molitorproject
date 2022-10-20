@@ -4,7 +4,7 @@ import { MeContent } from './MeContent';
 import { MeContentsList } from './MeContentsList';
 import { MeProduct } from './MeProduct';
 import { MeProductVariant } from './MeProductVariant';
-import { MeProductImage } from './MeProductImage';
+import { MeMedia } from './MeMedia';
 import { MeCategory } from './MeCategory';
 import { MtIsNotNull , MtIsNull , MtToArray } from '../utils/MtTools';
 import { MeCollectionDetail } from './MeCollectionDetail';
@@ -50,18 +50,23 @@ export class MeCatalog
       this.allproducts[elem.id].author = this.GetArtist(elem.author_id);      
     });
 
-    this.data.product_images.forEach( elem => { 
-      let prd = this.GetProduct(elem.product_id);
-      if (MtIsNotNull(prd))
+    this.data.medias.forEach( elem => { 
+
+      let obj = this.GetObject(elem.object_id, elem.object_type);
+      if (MtIsNotNull(obj))
       {
-        let prdimg = new MeProductImage(elem.id);
-        prdimg.product = prd;
-        prd.product_images[elem.id] = prdimg;
-        prdimg.type = elem.type;
-        prdimg.image_type = elem.image_type;
-        prdimg.image_file = elem.image_file.trim();
-        prdimg.image_path = elem.image_path.trim();
-        prdimg.alt_text = elem.alt_text;      
+        let medium = new MeMedia(elem.id);
+        medium.object = obj;
+        if (MtIsNotNull(obj.medias))
+        {
+          obj.medias[elem.id] = medium;
+        }
+        medium.type = elem.type;
+        medium.object_type = elem.object_type;
+        medium.media_type = elem.media_type;
+        medium.media_file = elem.media_file.trim();
+        medium.media_path = elem.media_path.trim();
+        medium.alt_text = elem.alt_text;      
       }
     });
 
@@ -142,21 +147,19 @@ export class MeCatalog
     return this.allartists[id];
    }
    
+   GetObject(id, typ)
+   {
+    switch(typ)
+    {
+      case "product" : return this.GetProduct(id);
+      case "variant" : return this.GetVariant(id);
+      case "content" : return this.GetContent(id);
+      default : return null;
+    }
+   }
    GetProduct(id)
    {
      return this.allproducts[id];
-   }
-
-   GetCategory(name)
-   {
-     var result = this.allcategories[name];
-     if (MtIsNull(result))
-     {
-      result = new MeCategory("cat-"+name);
-      result.name = name;
-      this.allcategories[name] = result;
-     }
-     return result;
    }
    
    GetVariant(id)
@@ -174,6 +177,17 @@ export class MeCatalog
      return this.allcontents_lists[id];
    }
 
+   GetCategory(name)
+   {
+     var result = this.allcategories[name];
+     if (MtIsNull(result))
+     {
+      result = new MeCategory("cat-"+name);
+      result.name = name;
+      this.allcategories[name] = result;
+     }
+     return result;
+   }
    GetProductsList(collectionId)
    {
        let result  = [];   

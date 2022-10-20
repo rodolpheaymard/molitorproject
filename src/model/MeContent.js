@@ -6,5 +6,6 @@ export class MeContent extends Me
     {
         super(id);
         this.product = null;
+        this.medias = {};
     }
 }
