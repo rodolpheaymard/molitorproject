@@ -6,7 +6,9 @@ import { MeProduct } from './MeProduct';
 import { MeProductVariant } from './MeProductVariant';
 import { MeProductImage } from './MeProductImage';
 import { MeCategory } from './MeCategory';
-import { MtIsNotNull , MtIsNull } from '../utils/MtTools';
+import { MtIsNotNull , MtIsNull , MtToArray } from '../utils/MtTools';
+import { MeCollectionDetail } from './MeCollectionDetail';
+import { MeExhibitionStep } from './MeExhibitionStep';
 
 export class MeCatalog
 {
@@ -96,6 +98,35 @@ export class MeCatalog
       this.allcontents_lists[elem.id].type = elem.type;
       this.allcontents_lists[elem.id].title = elem.title;
     });
+
+    this.data.collection_details.forEach( elem => { 
+      let coll = this.GetContentsList(elem.contents_list_id);
+      if (MtIsNotNull(coll))
+      {
+        var n = new MeCollectionDetail(elem.id);
+        n.contents_list_id = elem.contents_list_id;
+        coll.contents[elem.id] = n;
+        n.product = this.GetProduct(elem.product_id);
+        n.text = elem.text;
+        n.order = elem.order;
+      }
+     });
+
+     this.data.exhibition_steps.forEach( elem => { 
+      let exhibition = this.GetContentsList(elem.exhibition_id);
+      if (MtIsNotNull(exhibition))
+      {
+        var n = new MeExhibitionStep(elem.id);
+        n.exhibition_id = elem.exhibition_id;
+        exhibition.contents[elem.id] = n;
+        n.order = elem.order;
+        n.duration = elem.duration;     
+        n.content = this.GetContent(elem.content_id);        
+        n.text_before = elem.text_before;
+        n.text_after = elem.text_after;
+      }
+     });
+
    }
 
    GetArtist(id)
@@ -146,15 +177,15 @@ export class MeCatalog
    GetProductsList(collectionId)
    {
        let result  = [];   
-       this.data.collection_details.forEach( elem => { 
-        if (elem.contents_list_id === collectionId)
+       MtToArray(this.allcontents_lists).forEach( elem => { 
+        if (elem.id === collectionId)
          {
-           let prd = this.GetProduct(elem.product_id);
-           if (prd !== null)
-           {
-             result.push(prd);
-           }
-         }
+           MtToArray(elem.contents).forEach( e => {
+            if (MtIsNotNull(e.product))
+            {
+              result.push(e.product);
+            }});
+          } 
        });
        return result;
    }

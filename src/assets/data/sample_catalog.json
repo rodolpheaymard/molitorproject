@@ -523,14 +523,14 @@
       "type": "content",
       "product_id": "",
       "image_url": "",
-      "text": ""
+      "text": "Mon tout premier contenu intéressant"
     },
     {
       "id": "cnt-00000002",
       "type": "content",
       "product_id": "",
-      "image_url": "",
-      "text": "ceci est un \"test\""
+      "image_url": "https://img.freepik.com/photos-gratuite/mont-mont-blanc-couvert-neige-refletant-eau-dans-soiree-chamonix-france_181624-33408.jpg?w=900&t=st=1666253262~exp=1666253862~hmac=0300dded03a239dafe3d169a1a3fa62a3bd93b9e83ba3309e03a86278dc61c75",
+      "text": "ceci est un \"test de montagne\""
     },
     {
       "id": "cnt-00000003",
@@ -542,56 +542,56 @@
     {
       "id": "cnt-00000004",
       "type": "content",
-      "product_id": "",
+      "product_id": "prd-000003",
       "image_url": "",
-      "text": ""
+      "text": "Da Vinci"
     },
     {
       "id": "cnt-00000005",
       "type": "content",
-      "product_id": "",
+      "product_id": "prd-000004",
       "image_url": "",
       "text": ""
     },
     {
       "id": "cnt-00000006",
       "type": "content",
-      "product_id": "",
+      "product_id": "prd-000005",
       "image_url": "",
       "text": ""
     },
     {
       "id": "cnt-00000007",
       "type": "content",
-      "product_id": "",
+      "product_id": "prd-000001",
       "image_url": "",
       "text": ""
     },
     {
       "id": "cnt-00000008",
       "type": "content",
-      "product_id": "",
+      "product_id": "prd-000002",
       "image_url": "",
       "text": ""
     },
     {
       "id": "cnt-00000009",
       "type": "content",
-      "product_id": "",
+      "product_id": "prd-000006",
       "image_url": "",
       "text": ""
     },
     {
       "id": "cnt-00000010",
       "type": "content",
-      "product_id": "",
+      "product_id": "prd-000007",
       "image_url": "",
       "text": ""
     },
     {
       "id": "cnt-00000011",
       "type": "content",
-      "product_id": "",
+      "product_id": "prd-000008",
       "image_url": "",
       "text": ""
     }
@@ -776,7 +776,7 @@
       "type": "exhibition_step",
       "exhibition_id": "travel-thru-art",
       "order": "1",
-      "content_id": "",
+      "content_id": "cnt-00000004",
       "duration": "3",
       "text_before": "",
       "text_after": ""
@@ -786,7 +786,7 @@
       "type": "exhibition_step",
       "exhibition_id": "travel-thru-art",
       "order": "2",
-      "content_id": "",
+      "content_id": "cnt-00000005",
       "duration": "5",
       "text_before": "",
       "text_after": ""
@@ -796,7 +796,7 @@
       "type": "exhibition_step",
       "exhibition_id": "travel-thru-art",
       "order": "3",
-      "content_id": "",
+      "content_id": "cnt-00000006",
       "duration": "4",
       "text_before": "",
       "text_after": ""
@@ -806,7 +806,7 @@
       "type": "exhibition_step",
       "exhibition_id": "travel-thru-art",
       "order": "4",
-      "content_id": "",
+      "content_id": "cnt-00000007",
       "duration": "4",
       "text_before": "",
       "text_after": ""
@@ -816,7 +816,7 @@
       "type": "exhibition_step",
       "exhibition_id": "travel-thru-art",
       "order": "5",
-      "content_id": "",
+      "content_id": "cnt-00000008",
       "duration": "10",
       "text_before": "This is a great painting",
       "text_after": "I told you it was great"
@@ -826,7 +826,7 @@
       "type": "exhibition_step",
       "exhibition_id": "travel-thru-art",
       "order": "6",
-      "content_id": "",
+      "content_id": "cnt-00000009",
       "duration": "5",
       "text_before": "",
       "text_after": ""
@@ -836,7 +836,7 @@
       "type": "exhibition_step",
       "exhibition_id": "travel-thru-art",
       "order": "7",
-      "content_id": "",
+      "content_id": "cnt-00000010",
       "duration": "5",
       "text_before": "",
       "text_after": ""

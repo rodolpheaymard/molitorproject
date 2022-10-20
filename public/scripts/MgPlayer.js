@@ -47,7 +47,7 @@
 	function mgNextImage() {
 	  var imgfile = "../images/onair/digital_0" + curimg + ".jpg";
    	  curimg++;
-	  if (curimg>=3)  curimg=0;
+	  if (curimg>=5)  curimg=0;
 	  return imgfile;
 	}
 	
