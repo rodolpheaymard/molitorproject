@@ -12,7 +12,7 @@ class MgMainMenu extends React.Component {
 
   handleClick (event) {
 
-    this.props.navigate("/"+ event.key); 
+    this.props.router.navigate("/"+ event.key); 
   
   };
   

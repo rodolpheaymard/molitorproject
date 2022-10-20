@@ -3,7 +3,7 @@ import { Typography  } from 'antd';
 import { Col, Row } from 'antd';
 import { MgHeader } from './MgHeader';
 import { MgFooter } from './MgFooter';
-import { MgProductBlock } from './MgProductBlock';
+import MgProductBlock  from './MgProductBlock';
 import { withRouter } from "./withRouter";
 
 

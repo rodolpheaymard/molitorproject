@@ -2,23 +2,30 @@ import React from 'react';
 import { MtIsNull } from '../utils/MtTools';
 import 'antd/dist/antd.css';
 import { Typography , Space } from 'antd';
+import { withRouter } from "./withRouter";
 const { Title } = Typography;
 
 
-export class MgProductBlock extends React.Component {
+class MgProductBlock extends React.Component {
   constructor(props) {
     super(props);
     this.product = props.product;
     this.legend = {};
     this.legend.vertical = props.vlegend;
     this.legend.horizontal = props.hlegend;
+
+    this.handleClick = this.handleClick.bind(this);
   }
+
+  handleClick (event) {
+    this.props.router.navigate("/product/"+ this.product.id);   
+  };
 
   render() {
     if (MtIsNull(this.product))
       return <></>;
       
-      let blk1 = <img src={this.product.GetMediaUrl()} alt={this.product.title}></img>;
+      let blk1 = <img src={this.product.GetMediaUrl()} alt={this.product.title} onClick={this.handleClick} ></img>;
       let blk2 = <div className={"MgLegend " + (this.legend.horizontal ==="left"? "MgAlignLeft" : "MgAlignRight")}>
         <Space direction="vertical" size="0">
           <Title level={4}><strong>{this.product.title}</strong></Title>
@@ -35,3 +42,5 @@ export class MgProductBlock extends React.Component {
     return ( <div className='MgProductBlock MgVertical'>{blk1}{blk2}</div>  );
   }
 }
+
+export default withRouter(MgProductBlock)

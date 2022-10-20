@@ -4,7 +4,7 @@ import {Fragment} from 'react';
 import { MtIsNotNull, MtToNupletArray } from '../utils/MtTools';
 import { Col, Row } from 'antd';
 //import img_waiting from '../assets/images/img_cheeta.JPG';
-import { MgProductBlock } from './MgProductBlock';
+import MgProductBlock from './MgProductBlock';
 
 export class MgProductListBlock extends React.Component {
   constructor(props) {
