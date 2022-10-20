@@ -1,9 +1,7 @@
 
 import React from 'react';
 import { Menu } from 'antd';
-import {withRouter} from './withRouter'
-//import { MailOutlined, AppstoreOutlined, SettingOutlined } from '@ant-design/icons';
-
+import { withRouter } from "./withRouter";
 
 
 class MgMainMenu extends React.Component {
@@ -19,7 +17,6 @@ class MgMainMenu extends React.Component {
   };
   
   render() {
-     // const [current, setCurrent] = React.useState('mail');
 
       const items = [
       {
@@ -32,7 +29,6 @@ class MgMainMenu extends React.Component {
       }
     ];
     return <Menu items={items} mode="horizontal" onClick={this.handleClick} />;
-    // return <Menu items={items} selectedKeys={[current]} mode="horizontal" onClick={this.handleClick} />;
   }
 }
 

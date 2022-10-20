@@ -1,5 +1,6 @@
 
 
+
 export function MtIsNotNull(obj)
 {
    return obj !== null  &&  typeof obj !== 'undefined' ;

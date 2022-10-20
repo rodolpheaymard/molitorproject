@@ -10,6 +10,8 @@ import { MtIsNotNull , MtIsNull , MtToArray } from '../utils/MtTools';
 import { MeCollectionDetail } from './MeCollectionDetail';
 import { MeExhibitionStep } from './MeExhibitionStep';
 
+
+
 export class MeCatalog
 {
    constructor() 
@@ -204,3 +206,7 @@ export class MeCatalog
        return result;
    }
 }
+
+
+const singleCatalog = Object.freeze(new MeCatalog());
+export default singleCatalog;

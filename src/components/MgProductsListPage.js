@@ -6,7 +6,7 @@ const { Title } = Typography;
   
  
 
-export class MgWorkOfArtListPage extends React.Component {
+export class MgProductsListPage extends React.Component {
  
   render() {
     return (<><Row><Col span={24}><MgHeader /></Col></Row>
