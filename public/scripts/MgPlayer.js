@@ -40,8 +40,8 @@
 	}
 
 	document.onwebkitfullscreenchange = mgFullscreenChanged;
-	document.documentElement.onclick = mgGoFullscreen;
-	document.onkeydown = mgGoFullscreen;
+	document.documentElement.onclick = mgStartPlayer;
+	document.onkeydown = mgStartPlayer;
 	var curimg = 0;    
 
 	function mgNextImage() {
@@ -57,11 +57,21 @@
 		{		
 		  playerImage.src = mgNextImage();
 		}
-		setTimeout(mgChangeImage, 2000);
+		setTimeout(mgChangeImage, 4000);
 	}
 	
 	function mgStartPlayer() {
+	    mgGoFullscreen();
         setTimeout(mgChangeImage, 1000);
+
+		document.documentElement.onclick = mgStopPlayer;
+	    document.onkeydown = mgStopPlayer;
+	}
+
+	function mgStopPlayer() {
+		document.documentElement.onclick = mgStartPlayer;
+	    document.onkeydown = mgStartPlayer;
+		window.location.href = '/';
 	}
 	
-    mgStartPlayer();
+	

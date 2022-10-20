@@ -11,7 +11,7 @@ export class MgProductListBlock extends React.Component {
   }
 
   render() {
-    const listProducts = this.products.map((prd) => <MgProductBlock product={prd}/>);
+    const listProducts = this.products.map((prd) => <MgProductBlock key={prd.id} product={prd}/>);
 
     return ( <>{listProducts}</> 
     );

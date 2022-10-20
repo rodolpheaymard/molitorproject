@@ -21,7 +21,8 @@ export class MgExhibitionPage extends React.Component {
   render() {
     return ( <>       
                <div className="MgExhibitionPlayer" id="mgPlayer">     
-               <img className="MgExhibitionPlayerImage"  id="mgPlayerImage" alt="work of art currently on air"/>
+               <img src="/images/site/exhibition_start.jpg" 
+                    id="mgPlayerImage" alt="work of art currently on air" />
                <div className="MgExhibitionPlayerStart" id="mgPlayerOverlay">
                 press anywhere to go full screen</div> 
                </div>
