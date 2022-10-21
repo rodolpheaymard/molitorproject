@@ -6,7 +6,7 @@ import { Col, Row } from 'antd';
 import { MtIsNull, MtToArray } from '../utils/MtTools';
 import { Me } from '../model/Me';
 import { MeMedia } from '../model/MeMedia';
-import ReactHtmlParser from 'react-html-parser'; 
+import parse from 'html-react-parser';
 
 class MgBlockContent extends MgComponent {
   constructor(props) {
@@ -38,7 +38,7 @@ class MgBlockContent extends MgComponent {
 
   rdrHtml()
   {
-    return <div key={this.content.id}> {ReactHtmlParser(this.content.data) } </div>  ;
+    return <div key={this.content.id}> {parse(this.content.data)} </div>  ;
   }
 
 
