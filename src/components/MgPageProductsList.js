@@ -1,5 +1,5 @@
 import React from 'react';
-import MgPage from './MgComponent';
+import MgComponent from './MgComponent';
 import MgBlockHeader from './MgBlockHeader';
 import { Typography } from 'antd';
 import { Col, Row } from 'antd';
@@ -8,7 +8,7 @@ const { Title } = Typography;
   
  
 
- class MgPageProductsList extends MgPage {
+ class MgPageProductsList extends MgComponent {
  
   render() {
     return (<><Row><Col span={24}><MgBlockHeader /></Col></Row>

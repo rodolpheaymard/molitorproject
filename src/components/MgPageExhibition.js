@@ -1,5 +1,5 @@
 import React from 'react';
-import MgPage from './MgComponent';
+import MgComponent from './MgComponent';
 import { withRouter } from './withRouter';
 
 
@@ -12,7 +12,7 @@ export const appendScript = (scriptToAppend) => {
   document.body.appendChild(script);
 }
 
- class MgPageExhibition extends MgPage {
+ class MgPageExhibition extends MgComponent {
  
   componentDidMount () {
     appendScript(process.env.PUBLIC_URL + '/scripts/MgPlayer.js');

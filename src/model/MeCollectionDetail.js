@@ -6,6 +6,7 @@ export class MeCollectionDetail extends Me
     constructor(id)
     {
         super(id);
-        this.product = null;
+        this.object_type = null;
+        this.object = null;
     }    
 }

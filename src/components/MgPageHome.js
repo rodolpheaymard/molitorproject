@@ -1,14 +1,13 @@
 import React from 'react';
 import { withRouter } from './withRouter';
-import MgPage from './MgComponent';
+import MgComponent from './MgComponent';
 import MgBlockFooter from './MgBlockFooter';
 import MgBlockHeader from './MgBlockHeader';
 import MgBlockHome  from './MgBlockHome';
 import { Col, Row } from 'antd';
-import 'antd/dist/antd.css';
   
  
-class MgPageHome extends MgPage {
+class MgPageHome extends MgComponent {
  
   constructor(props)
   {

@@ -8,7 +8,7 @@ import { MeMedia } from './MeMedia';
 import { MeCategory } from './MeCategory';
 import { MtIsNotNull , MtIsNull , MtToArray } from '../utils/MtTools';
 import { MeCollectionDetail } from './MeCollectionDetail';
-import { MeExhibitionStep } from './MeExhibitionStep';
+import { Me } from './Me';
 
 
 
@@ -52,6 +52,16 @@ export class MeCatalog
       this.allproducts[elem.id].author = this.GetArtist(elem.author_id);      
     });
 
+    
+    this.allcontents = {};
+    this.data.contents.forEach( elem => { 
+     this.allcontents[elem.id] = new MeContent(elem.id);
+     this.allcontents[elem.id].object_id = elem.object_id;
+     this.allcontents[elem.id].object_type = elem.object_type;  
+     this.allcontents[elem.id].template = elem.template;
+     this.allcontents[elem.id].data = elem.data;
+   });
+
     this.data.medias.forEach( elem => { 
 
       let obj = this.GetObject(elem.object_id, elem.object_type);
@@ -68,19 +78,9 @@ export class MeCatalog
         medium.media_type = elem.media_type;
         medium.media_file = elem.media_file.trim();
         medium.media_path = elem.media_path.trim();
+        medium.media_url = elem.media_url.trim();
         medium.alt_text = elem.alt_text;      
       }
-    });
-
-
-     this.allcontents = {};
-     this.data.contents.forEach( elem => { 
-      this.allcontents[elem.id] = new MeContent(elem.id);
-      this.allcontents[elem.id].product_id = elem.product_id;
-      this.allcontents[elem.id].text = elem.text;
-      this.allcontents[elem.id].image_url = elem.image_url.trim();   
-
-      this.allcontents[elem.id].product = this.GetProduct(elem.product_id);      
     });
 
      this.allvariants = {};
@@ -102,8 +102,8 @@ export class MeCatalog
      this.allcontents_lists = {};
      this.data.contents_lists.forEach( elem => { 
       this.allcontents_lists[elem.id] = new MeContentsList(elem.id);
-      this.allcontents_lists[elem.id].type = elem.type;
       this.allcontents_lists[elem.id].title = elem.title;
+      this.allcontents_lists[elem.id].type = elem.type;
     });
 
     this.data.collection_details.forEach( elem => { 
@@ -113,26 +113,14 @@ export class MeCatalog
         var n = new MeCollectionDetail(elem.id);
         n.contents_list_id = elem.contents_list_id;
         coll.contents[elem.id] = n;
-        n.product = this.GetProduct(elem.product_id);
-        n.text = elem.text;
+        n.object_type = elem.object_type;
+        n.object = this.GetObject(elem.object_id,elem.object_type);
         n.order = elem.order;
+        n.timing_begin = elem.timing_begin;
+        n.timing_end = elem.timing_end;
       }
      });
 
-     this.data.exhibition_steps.forEach( elem => { 
-      let exhibition = this.GetContentsList(elem.exhibition_id);
-      if (MtIsNotNull(exhibition))
-      {
-        var n = new MeExhibitionStep(elem.id);
-        n.exhibition_id = elem.exhibition_id;
-        exhibition.contents[elem.id] = n;
-        n.order = elem.order;
-        n.duration = elem.duration;     
-        n.content = this.GetContent(elem.content_id);        
-        n.text_before = elem.text_before;
-        n.text_after = elem.text_after;
-      }
-     });
 
    }
 
@@ -153,9 +141,11 @@ export class MeCatalog
    {
     switch(typ)
     {
-      case "product" : return this.GetProduct(id);
-      case "variant" : return this.GetVariant(id);
-      case "content" : return this.GetContent(id);
+      case Me.PRODUCT: return this.GetProduct(id);
+      case Me.VARIANT : return this.GetVariant(id);
+      case Me.CONTENT : return this.GetContent(id);
+      case Me.CONTENTS_LIST : return this.GetContentsList(id);
+      case Me.CATEGORY : return this.GetCategory(id);
       default : return null;
     }
    }
@@ -190,16 +180,17 @@ export class MeCatalog
      }
      return result;
    }
-   GetProductsList(collectionId)
+
+   GetObjectsList(collectionId)
    {
        let result  = [];   
        MtToArray(this.allcontents_lists).forEach( elem => { 
         if (elem.id === collectionId)
          {
            MtToArray(elem.contents).forEach( e => {
-            if (MtIsNotNull(e.product))
+            if (MtIsNotNull(e.object))
             {
-              result.push(e.product);
+              result.push(e.object);
             }});
           } 
        });

@@ -22,13 +22,14 @@ class MgMainMenu extends React.Component {
       {
         label: 'Menu',
         key: 'submenu',
-        children: [ { label: 'Home', key: 'home' },
-                    { label: 'Exhibition', key: 'exhibition' },
-                    { label: 'Collections', key: 'collections' },
-                    { label: 'Artists', key: 'artists'  }]
+        style: {textAlign: 'right'},
+        children: [ { label: 'Home', key: 'home' , style: {textAlign: 'right'}},
+                    { label: 'Exhibition', key: 'exhibition'  , style: {textAlign: 'right'}},
+                    { label: 'Collections', key: 'collections'  , style: {textAlign: 'right'}},
+                    { label: 'Artists', key: 'artists'   , style: {textAlign: 'right'}}]
       }
     ];
-    return <Menu items={items} mode="horizontal" onClick={this.handleClick} />;
+    return <Menu items={items} mode="horizontal" onClick={this.handleClick} className="MgRightAlign"/>;
   }
 }
 

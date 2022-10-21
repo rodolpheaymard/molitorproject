@@ -1,18 +1,16 @@
 import React from 'react';
-import MgPage from './MgComponent';
-import { Typography  } from 'antd';
+import { withRouter } from "./withRouter";
+import MgComponent from './MgComponent';
 import { Col, Row } from 'antd';
 import MgBlockHeader from './MgBlockHeader';
 import MgBlockFooter from './MgBlockFooter';
 import MgBlockProduct from './MgBlockProduct';
-import { withRouter } from "./withRouter";
-
-
-const { Title } = Typography;
+import MgBlockProductDetails from './MgBlockProductDetails';
 
 
 
-class MgPageProduct extends MgPage {
+
+class MgPageProduct extends MgComponent {
   constructor(props)
   {
     super(props);
@@ -22,9 +20,31 @@ class MgPageProduct extends MgPage {
   }
 
   render() {
+    let pgProduct = null;
+     
+     if (this.IsDesktop())
+     {
+      pgProduct = this.desktopRender();
+     }
+     else if (this.IsMobile())
+     {
+      pgProduct = this.mobileRender();
+     }
+
+    return (<>{pgProduct}</>);
+  }
+
+  desktopRender() {
     return (<><Row><Col span={24}><MgBlockHeader /></Col></Row>
-    <Row><Col span={24}> <Title> {this.product.title} </Title></Col></Row>
-    <Row><Col span={24}> <MgBlockProduct product={this.product}/> </Col></Row>
+    <Row><Col span={18}><MgBlockProduct product={this.product}/> </Col>
+         <Col span={6}> <MgBlockProductDetails product={this.product}/> </Col>  </Row>
+    <Row><Col span={24}><MgBlockFooter /></Col></Row></> );
+  }
+
+  mobileRender() {
+    return (<><Row><Col span={24}><MgBlockHeader /></Col></Row>
+    <Row><Col span={24}><MgBlockProduct product={this.product}/> </Col></Row>
+    <Row><Col span={24}><MgBlockProductDetails product={this.product}/> </Col>  </Row>
     <Row><Col span={24}><MgBlockFooter /></Col></Row></> );
   }
 }

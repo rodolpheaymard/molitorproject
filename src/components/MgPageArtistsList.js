@@ -1,14 +1,15 @@
 import React from 'react';
-import MgPage from './MgComponent';
+import { withRouter } from './withRouter';
+import MgComponent from './MgComponent';
+import MgBlockHeader from './MgBlockHeader';
+
 import { Typography  } from 'antd';
 import { Col, Row } from 'antd';
-import MgBlockHeader from './MgBlockHeader';
-import { withRouter } from './withRouter';
 const { Title } = Typography;
   
  
 
-class MgPageArtistsListPage extends MgPage {
+class MgPageArtistsListPage extends MgComponent {
  
   render() {
     return (<><Row><Col span={24}><MgBlockHeader /></Col></Row>
