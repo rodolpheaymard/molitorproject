@@ -1,10 +1,12 @@
 import React from 'react';
 import { Col, Row } from 'antd';
+import MgComponent from './MgComponent';
+import { withRouter } from './withRouter';
 
-export class MgFooter extends React.Component {
+class MgBlockFooter extends MgComponent {
  
   render() {
-    return (<> <Row className="MgFooter">
+    return (<> <Row className="MgBlockFooter">
                 <Col span={6}>
                   <br/> 
                   <br/> Suivre MEGALART
@@ -25,3 +27,4 @@ export class MgFooter extends React.Component {
                 </Row></>);
   }
 }
+export default withRouter(MgBlockFooter);

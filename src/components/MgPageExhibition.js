@@ -1,7 +1,7 @@
 import React from 'react';
-//import { Typography } from 'antd';
-//import { Col, Row } from 'antd';
-//const { Title } = Typography;
+import MgPage from './MgComponent';
+import { withRouter } from './withRouter';
+
 
 export const appendScript = (scriptToAppend) => {
   const script = document.createElement("script");
@@ -12,7 +12,7 @@ export const appendScript = (scriptToAppend) => {
   document.body.appendChild(script);
 }
 
-export class MgExhibitionPage extends React.Component {
+ class MgPageExhibition extends MgPage {
  
   componentDidMount () {
     appendScript(process.env.PUBLIC_URL + '/scripts/MgPlayer.js');
@@ -30,3 +30,5 @@ export class MgExhibitionPage extends React.Component {
   );
   }
 }
+
+export default withRouter(MgPageExhibition);

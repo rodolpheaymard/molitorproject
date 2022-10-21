@@ -24,7 +24,7 @@ class MgMainMenu extends React.Component {
         key: 'submenu',
         children: [ { label: 'Home', key: 'home' },
                     { label: 'Exhibition', key: 'exhibition' },
-                    { label: 'Collections', key: 'workofart' },
+                    { label: 'Collections', key: 'collections' },
                     { label: 'Artists', key: 'artists'  }]
       }
     ];

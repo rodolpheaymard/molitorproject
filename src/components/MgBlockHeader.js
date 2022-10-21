@@ -2,14 +2,17 @@ import React from 'react';
 import { Col, Row } from 'antd';
 import  MgMainMenu  from './MgMainMenu';
 import { MgLogo } from './MgLogo';
+import MgComponent from './MgComponent';
+import { withRouter } from './withRouter';
 
-
-export class MgHeader extends React.Component {
+class MgBlockHeader extends MgComponent {
  
   render() {
-    return (<> <Row className="MgHeader"><Col span={6} align="middle"><MgLogo/></Col>
+    return (<> <Row className="MgBlockHeader"><Col span={6} align="middle"><MgLogo/></Col>
                     <Col span={12}></Col>
                     <Col span={6}><MgMainMenu/></Col>
                 </Row></>);
   }
 }
+
+export default withRouter(MgBlockHeader);

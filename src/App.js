@@ -1,13 +1,12 @@
 import './assets/css/Mg.css';
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes  } from "react-router-dom";
-import  { MgHomePage } from './components/MgHomePage';
-import  { MgExhibitionPage } from './components/MgExhibitionPage';
-import  { MgArtistsListPage } from './components/MgArtistsListPage';
-import  { MgProductsListPage } from './components/MgProductsListPage';
-//import   MgProductPageWrapper  from './utils/MgWrapper';
-import   MgProductPage  from './components/MgProductPage';
-import   singleCatalog   from  './model/MeCatalog';
+import  MgPageHome from './components/MgPageHome';
+import  MgPageExhibition from './components/MgPageExhibition';
+import  MgPageArtistsList from './components/MgPageArtistsList';
+import  MgPageProductsList from './components/MgPageProductsList';
+import  MgPageProduct from './components/MgPageProduct';
+import  singleCatalog from './model/MeCatalog';
 
 
      
@@ -15,12 +14,12 @@ function App() {
   return (
     <Router>
       <Routes>
-      <Route path="/" element={<MgHomePage catalog={singleCatalog} />} />
-      <Route path="/home" element={<MgHomePage  catalog={singleCatalog} />} />
-      <Route path="/exhibition" element={<MgExhibitionPage  catalog={singleCatalog} />} />
-      <Route path="/artists" element={<MgArtistsListPage  catalog={singleCatalog} />} />
-      <Route path="/product/:id" element={<MgProductPage  catalog={singleCatalog} />} />
-      <Route path="/worksofart" element={<MgProductsListPage  catalog={singleCatalog} />} />
+      <Route path="/" element={<MgPageHome catalog={singleCatalog} />} />
+      <Route path="/home" element={<MgPageHome  catalog={singleCatalog} />} />
+      <Route path="/exhibition" element={<MgPageExhibition  catalog={singleCatalog} />} />
+      <Route path="/artists" element={<MgPageArtistsList  catalog={singleCatalog} />} />
+      <Route path="/product/:id" element={<MgPageProduct  catalog={singleCatalog} />} />
+      <Route path="/collections" element={<MgPageProductsList  catalog={singleCatalog} />} />
      </Routes>
     </Router> );
 }

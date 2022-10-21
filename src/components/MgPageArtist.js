@@ -1,10 +1,12 @@
 import React from 'react';
-import { Typography , Space } from 'antd';
+import MgPage from './MgPage';
+import { Typography } from 'antd';
 import { Col, Row } from 'antd';
+
 const { Title } = Typography;
 
 
-export class MgArtistPage extends React.Component {
+class MgPageArtist extends MgPage {
  
   render() {
     return (<><Row><Col span={24}><MgHeader /></Col></Row>
@@ -12,3 +14,5 @@ export class MgArtistPage extends React.Component {
     <Row><Col span={24}><MgFooter /></Col></Row></> );
   }
 }
+
+export default withRouter(MgPageArtist);

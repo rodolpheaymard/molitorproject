@@ -1,9 +1,10 @@
 import React from 'react';
+import MgPage from './MgComponent';
 import { Typography  } from 'antd';
 import { Col, Row } from 'antd';
-import { MgHeader } from './MgHeader';
-import { MgFooter } from './MgFooter';
-import MgProductBlock  from './MgProductBlock';
+import MgBlockHeader from './MgBlockHeader';
+import MgBlockFooter from './MgBlockFooter';
+import MgBlockProduct from './MgBlockProduct';
 import { withRouter } from "./withRouter";
 
 
@@ -11,7 +12,7 @@ const { Title } = Typography;
 
 
 
-class MgProductPage extends React.Component {
+class MgPageProduct extends MgPage {
   constructor(props)
   {
     super(props);
@@ -21,12 +22,12 @@ class MgProductPage extends React.Component {
   }
 
   render() {
-    return (<><Row><Col span={24}><MgHeader /></Col></Row>
+    return (<><Row><Col span={24}><MgBlockHeader /></Col></Row>
     <Row><Col span={24}> <Title> {this.product.title} </Title></Col></Row>
-    <Row><Col span={24}> <MgProductBlock product={this.product}/> </Col></Row>
-    <Row><Col span={24}><MgFooter /></Col></Row></> );
+    <Row><Col span={24}> <MgBlockProduct product={this.product}/> </Col></Row>
+    <Row><Col span={24}><MgBlockFooter /></Col></Row></> );
   }
 }
 
-export default withRouter(MgProductPage)
+export default withRouter(MgPageProduct);
  
