@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { withRouter } from './withRouter';
 import 'antd/dist/antd.css';
 import MgComponent from './MgComponent';
-import { MtIsNotNull, MtToPairArray } from '../utils/MtTools';
+import { MtIsNotNull, MtToArray, MtToPairArray } from '../utils/MtTools';
 import { Col, Row } from 'antd';
 import MgBlockArtist from './MgBlockArtist';
 
@@ -48,7 +48,8 @@ class MgBlockArtistsList extends MgComponent {
 
   mobileRender() {
         // rendu sur 1 colonne    
-        const listArtists = this.artists.map((art) => {
+        let tabarts = MtToArray(this.artists);
+        const listArtists = tabarts.map((art) => {
             return  <Row><Col span={24}><MgBlockArtist key={art.id} artist={art}/></Col></Row>
           });
           return listArtists;
