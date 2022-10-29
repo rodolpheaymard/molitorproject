@@ -8,7 +8,10 @@ export class Me
     static CATEGORY = "category";
     static MEDIA = "media";
     static ARTIST = "artist";
-
+    static COLLECTION = "collection";
+    static EXHIBITION = "exhibition";
+    
+    static HOME_ID = "home";
     static TPL_SIMPLE_TEXT = "text";
     static TPL_HTML = "html";
     static TPL_IMAGE6_TEXT18 = "img6_text18";

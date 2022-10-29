@@ -15,12 +15,12 @@ class MgPageHome extends MgComponent {
     this.catalog = props.catalog;    
   }
 
-    render() {
-      return ( <><Row><Col span={24}><MgBlockHeader /></Col></Row>
-                  <Row><Col span={24}><MgBlockHome catalog={this.catalog} /></Col></Row>
-                  <Row><Col span={24}><MgBlockFooter /></Col></Row></> 
-      );
-    }
+  render() {
+    return ( <><Row><Col span={24}><MgBlockHeader /></Col></Row>
+                <Row><Col span={24}><MgBlockHome catalog={this.catalog} /></Col></Row>
+                <Row><Col span={24}><MgBlockFooter /></Col></Row></> 
+    );
+  }
 }
 
 export default withRouter(MgPageHome);

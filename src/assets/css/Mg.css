@@ -12,7 +12,7 @@
 .MgVertical {    
   display: flex;
   flex-direction: column;
-  width: "100%";
+  width: 100%;
   align-items: center;
 }
 
@@ -26,6 +26,10 @@
   align-items: flex-end;
 }
 
+.MgAlignCenter {    
+  text-align: center; 
+  align-items: center;
+}
 
 .MgLogo {
     width:50px;
@@ -94,6 +98,7 @@
   object-fit: contain;
 }
 
+
 .MgLegend {
   display: flex;
   flex-direction: column;
@@ -113,6 +118,24 @@
   padding: 20px 10px 0px 50px;
 }
 
+
+.MgBlockArtist {
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: flex-start; /* align vertical */  
+  padding: 40px 40px 40px 40px ;
+}
+
+.MgBlockArtist img {
+  height: 400px;
+  width:100%;
+  object-fit: contain;
+}
+
+.MgArtistLegend {
+  align-self: center;
+}
+
 .MgTitle{
   font-size: xx-large;
   font-weight: bold;
@@ -122,4 +145,30 @@
   background-color: black;
   color: white;
   font-weight: bold;
+}
+
+.MgBlockCollections {
+  display: flex;
+  flex-direction: column;
+  justify-content: left; /* align horizontal */
+  align-items: flex-start; /* align vertical */  
+  padding: 40px 40px 40px 40px ;
+}
+
+.MgBlockCollection {
+ display: flex;
+ justify-content: center; /* align horizontal */
+ align-items: flex-end; /* align vertical */  
+ padding: 10px 10px 10px 10px ;
+}
+
+
+.MgBlockCollection img {
+  height: 130px;
+  object-fit: contain;
+  padding: 10px 10px 10px 10px ;
+}
+
+.MgBlockCollectionText {
+  padding: 60px 10px 10px 10px ;
 }

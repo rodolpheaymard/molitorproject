@@ -1,5 +1,6 @@
 import { MtIsNotNull, MtToArray } from "../utils/MtTools";
 import { Me } from "./Me";
+import { MeMedia } from "./MeMedia";
 
 export class MeContentsList extends Me
 {
@@ -55,4 +56,17 @@ export class MeContentsList extends Me
       }
       return result;
     } 
+
+    GetMediaUrl()
+    {
+      let result = MeMedia.GetDefaultImageUrl();
+
+      let imgs = MtToArray(this.medias);
+      if (MtIsNotNull(imgs) && imgs.length > 0 )
+      {         
+         result = imgs[0].GetMediaUrl();
+      }
+      return result;      
+    }
+
 }

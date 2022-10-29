@@ -35,6 +35,7 @@ export class MeCatalog
        this.allartists[elem.id].city = elem.city;
        this.allartists[elem.id].state = elem.state;
        this.allartists[elem.id].short_description = elem.short_description;
+       this.allartists[elem.id].unknown = false;
      });
 
      this.allcategories = {};
@@ -61,27 +62,6 @@ export class MeCatalog
      this.allcontents[elem.id].template = elem.template;
      this.allcontents[elem.id].data = elem.data;
    });
-
-    this.data.medias.forEach( elem => { 
-
-      let obj = this.GetObject(elem.object_id, elem.object_type);
-      if (MtIsNotNull(obj))
-      {
-        let medium = new MeMedia(elem.id);
-        medium.object = obj;
-        if (MtIsNotNull(obj.medias))
-        {
-          obj.medias[elem.id] = medium;
-        }
-        medium.type = elem.type;
-        medium.object_type = elem.object_type;
-        medium.media_type = elem.media_type;
-        medium.media_file = elem.media_file.trim();
-        medium.media_path = elem.media_path.trim();
-        medium.media_url = elem.media_url.trim();
-        medium.alt_text = elem.alt_text;      
-      }
-    });
 
      this.allvariants = {};
      this.data.variants.forEach( elem => { 
@@ -122,6 +102,27 @@ export class MeCatalog
      });
 
 
+     this.data.medias.forEach( elem => { 
+
+      let obj = this.GetObject(elem.object_id, elem.object_type);
+      if (MtIsNotNull(obj))
+      {
+        let medium = new MeMedia(elem.id);
+        medium.object = obj;
+        if (MtIsNotNull(obj.medias))
+        {
+          obj.medias[elem.id] = medium;
+        }
+        medium.type = elem.type;
+        medium.object_type = elem.object_type;
+        medium.media_type = elem.media_type;
+        medium.media_file = elem.media_file.trim();
+        medium.media_path = elem.media_path.trim();
+        medium.media_url = elem.media_url.trim();
+        medium.alt_text = elem.alt_text;      
+      }
+    });
+
    }
 
    GetArtist(id)
@@ -130,17 +131,19 @@ export class MeCatalog
     if (MtIsNull(result))
     {
       result = new MeArtist("cat-"+id);
+      result.unknown = true;
       result.first_name = "unknown";
       result.last_name = "unknown";
-      this.allartists[id] = result;
+      //this.allartists[id] = result;
     }
-    return this.allartists[id];
+    return result;
    }
    
    GetObject(id, typ)
    {
     switch(typ)
     {
+      case Me.ARTIST: return this.GetArtist(id);
       case Me.PRODUCT: return this.GetProduct(id);
       case Me.VARIANT : return this.GetVariant(id);
       case Me.CONTENT : return this.GetContent(id);
@@ -180,7 +183,26 @@ export class MeCatalog
      }
      return result;
    }
+   
+   GetArtistsList()
+   {
+     return this.allartists;
+   }
 
+   GetCollections()
+   {
+    let result= [];
+    MtToArray(this.allcontents_lists).forEach(  (c) => { 
+      if (c.type === Me.COLLECTION
+          && c.id !== Me.HOME_ID)
+      {
+        result.push(c);;
+      }
+    });
+
+    return result;
+   }
+   
    GetObjectsList(collectionId)
    {
        let result  = [];   
