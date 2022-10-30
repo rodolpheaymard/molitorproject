@@ -155,6 +155,10 @@
   padding: 40px 40px 40px 40px ;
 }
 
+.MgBlockCollectionsRow {
+  width : 100%;
+}
+
 .MgBlockCollection {
  display: flex;
  justify-content: center; /* align horizontal */
@@ -171,4 +175,5 @@
 
 .MgBlockCollectionText {
   padding: 60px 10px 10px 10px ;
+  width : 80%
 }

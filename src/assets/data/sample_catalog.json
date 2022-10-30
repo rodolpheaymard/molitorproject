@@ -7,56 +7,56 @@
       "id": "prd-000001",
       "type": "product",
       "title": "The Persistence of Memory",
-      "author_id": "art-salvadordali",
+      "author_id": "art-salvador_dali",
       "category": "Paintings"
     },
     {
       "id": "prd-000002",
       "type": "product",
       "title": "The Temptation of Saint Anthony",
-      "author_id": "art-salvadordali",
+      "author_id": "art-salvador_dali",
       "category": "Paintings"
     },
     {
       "id": "prd-000003",
       "type": "product",
       "title": "Annunciation",
-      "author_id": "art-leonardodavinci",
+      "author_id": "art-leonardo_davinci",
       "category": "Paintings"
     },
     {
       "id": "prd-000004",
       "type": "product",
       "title": "Perspective",
-      "author_id": "art-leonardodavinci",
+      "author_id": "art-leonardo_davinci",
       "category": "Paintings"
     },
     {
       "id": "prd-000005",
       "type": "product",
       "title": "The Vitruvian Man",
-      "author_id": "art-leonardodavinci",
+      "author_id": "art-leonardo_davinci",
       "category": "Paintings"
     },
     {
       "id": "prd-000006",
       "type": "product",
       "title": "Number 11",
-      "author_id": "art-jacksonpollock",
+      "author_id": "art-jackson_pollock",
       "category": "Paintings"
     },
     {
       "id": "prd-000007",
       "type": "product",
       "title": "Full Fathom 5",
-      "author_id": "art-jacksonpollock",
+      "author_id": "art-jackson_pollock",
       "category": "Paintings"
     },
     {
       "id": "prd-000008",
       "type": "product",
       "title": "Convergence",
-      "author_id": "art-jacksonpollock",
+      "author_id": "art-jackson_pollock",
       "category": "Paintings"
     },
     {
@@ -1860,7 +1860,7 @@
       "type": "collection_detail",
       "contents_list_id": "home",
       "order": "2",
-      "object_id": "prd-000007",
+      "object_id": "prd-100-anne_turlais-027",
       "object_type": "product",
       "timing_begin": "0",
       "timing_end": "0"
@@ -1870,7 +1870,7 @@
       "type": "collection_detail",
       "contents_list_id": "home",
       "order": "3",
-      "object_id": "prd-000005",
+      "object_id": "prd-100-anne_turlais-026",
       "object_type": "product",
       "timing_begin": "0",
       "timing_end": "0"
@@ -1880,7 +1880,7 @@
       "type": "collection_detail",
       "contents_list_id": "home",
       "order": "4",
-      "object_id": "prd-000004",
+      "object_id": "prd-100-anne_turlais-005",
       "object_type": "product",
       "timing_begin": "0",
       "timing_end": "0"
@@ -1900,7 +1900,7 @@
       "type": "collection_detail",
       "contents_list_id": "home",
       "order": "6",
-      "object_id": "prd-000003",
+      "object_id": "prd-000008",
       "object_type": "product",
       "timing_begin": "0",
       "timing_end": "0"

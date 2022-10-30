@@ -29,16 +29,15 @@ class MgBlockCollection extends MgComponent {
     //    </div>;
  
     return (<div className='MgBlockCollection MgAlignCenter'>
-             <Row >
-                <Col>
+             <Row className='MgBlockCollectionsRow'>
+                <Col span={4}>
                 <Title level={2} onClick={this.handleClick} >
                 <img src={this.collection.GetMediaUrl()} alt={this.collection.title}></img></Title>
                 </Col>
-                 <Col className='MgBlockCollectionText'>
-                 <Title level={2} onClick={this.handleClick} >
-                 {this.collection.title}    
-                 </Title>                 
-                 </Col></Row>
+                 <Col span={8} className='MgBlockCollectionText'>
+                 <Title level={2} onClick={this.handleClick}>{this.collection.title}</Title>                 
+                 </Col>
+                 </Row>
             </div>   );
   }
 }
