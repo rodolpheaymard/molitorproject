@@ -14,6 +14,7 @@ class MgBlockProduct extends MgComponent {
     this.legend = {};
     this.legend.vertical = props.vlegend;
     this.legend.horizontal = props.hlegend;
+    this.legend.hide= props.nolegend;
 
     this.handleClick = this.handleClick.bind(this);
   }
@@ -38,7 +39,11 @@ class MgBlockProduct extends MgComponent {
         blk2 = blk3;
       }
 
-    return ( <div className='MgBlockProduct MgVertical'>{blk1}{blk2}</div>  );
+      if (this.legend.hide === true)
+      {
+        return ( <div className='MgBlockProduct MgVertical'> {blk1} </div>  );
+      }
+      return ( <div className='MgBlockProduct MgVertical'> {blk1} {blk2}</div>  );
   }
 }
 

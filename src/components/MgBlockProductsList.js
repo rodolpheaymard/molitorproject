@@ -56,7 +56,7 @@ class MgBlockProductsList extends MgComponent {
   mobileRender() {
     // rendu sur 1 colonne    
      const listProducts = this.products.map((prd) => {
-       return  <Row><Col span={24}><MgBlockProduct key={prd.id} product={prd} vlegend="below" hlegend="left" /></Col></Row>
+       return  <Row key={prd.id} ><Col span={24}><MgBlockProduct key={prd.id} product={prd} vlegend="below" hlegend="left" /></Col></Row>
      });
      return listProducts;
     } 

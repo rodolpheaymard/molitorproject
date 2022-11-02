@@ -36,14 +36,14 @@ class MgPageProduct extends MgComponent {
 
   desktopRender() {
     return (<><Row><Col span={24}><MgBlockHeader /></Col></Row>
-    <Row><Col span={18}><MgBlockProduct product={this.product}/> </Col>
+    <Row><Col span={18}><MgBlockProduct product={this.product} nolegend={true}/> </Col>
          <Col span={6}> <MgBlockProductDetails product={this.product}/> </Col>  </Row>
     <Row><Col span={24}><MgBlockFooter /></Col></Row></> );
   }
 
   mobileRender() {
     return (<><Row><Col span={24}><MgBlockHeader /></Col></Row>
-    <Row><Col span={24}><MgBlockProduct product={this.product}/> </Col></Row>
+    <Row><Col span={24}><MgBlockProduct product={this.product} nolegend={true}/> </Col></Row>
     <Row><Col span={24}><MgBlockProductDetails product={this.product}/> </Col>  </Row>
     <Row><Col span={24}><MgBlockFooter /></Col></Row></> );
   }
