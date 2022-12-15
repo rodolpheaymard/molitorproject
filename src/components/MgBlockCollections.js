@@ -37,7 +37,7 @@ class MgBlockCollections extends MgComponent {
     // rendu 2 colonnes
     let pairs = MtToPairArray(this.collections);
     const listCollections = pairs.map((pair) => {
-      return  <Row key={pair.left.id} className='MgBlockCollectionsRow'>
+      return  <Row key={pair.left.id} className='MgBlockCollectionRow'>
                <Col span={12}><MgBlockCollection key={pair.left.id} collection={pair.left}/></Col>
                <Col span={12}><MgBlockCollection key={(pair.right!==null ? pair.right.id : "none")} collection={pair.right}/></Col>
               </Row>

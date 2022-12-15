@@ -39,6 +39,10 @@ body {
   align-items: center;
 }
 
+.MgImageEnlight {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+
 .MgLogo {
     width:50px;
     height:40px;
@@ -160,10 +164,11 @@ body {
   flex-direction: column;
   justify-content: left; /* align horizontal */
   align-items: flex-start; /* align vertical */  
-  padding: 40px 40px 40px 40px ;
+  padding: 20px 20px 20px 20px ;
+  width:100%;
 }
 
-.MgBlockCollectionsRow {
+.MgBlockCollectionRow {
   width : 100%;
 }
 
@@ -176,9 +181,7 @@ body {
 
 
 .MgBlockCollection img {
-  height: 130px;
-  object-fit: contain;
-  padding: 10px 10px 10px 10px ;
+  width:
 }
 
 .MgBlockCollectionText {

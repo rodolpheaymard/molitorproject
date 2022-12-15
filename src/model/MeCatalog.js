@@ -71,6 +71,9 @@ export class MeCatalog
       this.allvariants[elem.id].physical_size = elem.physical_size;
       this.allvariants[elem.id].price_amount = elem.price_amount;      
       this.allvariants[elem.id].price_currency = elem.price_currency;      
+      this.allvariants[elem.id].stock_current = elem.stock_current;      
+      this.allvariants[elem.id].stock_total = elem.stock_total;      
+      this.allvariants[elem.id].owner = elem.owner;      
 
       this.allvariants[elem.id].product = this.GetProduct(elem.product_id);     
       if (MtIsNotNull( this.allvariants[elem.id].product ))     

@@ -19,7 +19,7 @@ class MgBlockFooter extends MgComponent {
                   </Col>
                 <Col span={6}>
                   MegalArt 
-                  <br/>123, rue du Louvre
+                  <br/>xxx, rue du Louvre
                   <br/>Paris, France
                   <br/>
                   <br/>nous contacter

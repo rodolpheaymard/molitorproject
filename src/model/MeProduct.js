@@ -21,4 +21,28 @@ export class MeProduct extends Me
       }
       return result;      
    }
+
+   tabPhysicalVariants()
+   {
+     let result = [];
+     MtToArray(this.variants).forEach(element => {
+      if (element.isPhysical())
+        result.push(element);
+     });
+
+     return result;
+   }
+
+   tabDigitalVariants()
+   {
+      let result = [];
+      MtToArray(this.variants).forEach(element => {
+       if (element.isDigital())
+         result.push(element);
+      });
+ 
+      return result;
+      
+   }
+   
 }
