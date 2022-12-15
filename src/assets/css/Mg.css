@@ -108,6 +108,9 @@ body {
 .MgBlockProduct img {
   width:100%;
   object-fit: contain;
+  -webkit-box-shadow: 0 3px 7px -2px rgba(0, 0, 0, .2);
+  -moz-box-shadow: 0 3px 7px -2px rgba(0, 0, 0, .2);
+  box-shadow: 0 3px 7px -2px rgba(0, 0, 0, .2);
 }
 
 
@@ -142,6 +145,9 @@ body {
   height: 400px;
   width:100%;
   object-fit: contain;
+  -webkit-box-shadow: 0 3px 7px -2px rgba(0, 0, 0, .2);
+  -moz-box-shadow: 0 3px 7px -2px rgba(0, 0, 0, .2);
+  box-shadow: 0 3px 7px -2px rgba(0, 0, 0, .2);
 }
 
 .MgArtistLegend {
@@ -181,7 +187,9 @@ body {
 
 
 .MgBlockCollection img {
-  width:
+  -webkit-box-shadow: 0 3px 7px -2px rgba(0, 0, 0, .2);
+  -moz-box-shadow: 0 3px 7px -2px rgba(0, 0, 0, .2);
+  box-shadow: 0 3px 7px -2px rgba(0, 0, 0, .2);
 }
 
 .MgBlockCollectionText {
