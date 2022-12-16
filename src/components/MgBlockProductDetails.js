@@ -51,7 +51,7 @@ class MgBlockProductDetails extends MgComponent {
 
 
     return ( <div className='MgBlockProductDetails MgVertical'>
-      <div>
+      <div className='MgBlockProductBlockTitle'>
         <div className='MgVertical MgAlignRight MgTitle'>{this.product.title}</div>
         <div className='MgVertical MgAlignRight'>{this.product.author.first_name + " " + this.product.author.last_name }</div>
         <div className='MgVertical MgAlignRight'>Painting</div>

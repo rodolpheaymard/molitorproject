@@ -199,11 +199,16 @@ body {
   width : 80%
 }
 
-.MgBlockProductBlockNFT {
-  height : 400px;
+.MgBlockProductBlockTitle {
+  height : 350px;
 }
+
+.MgBlockProductBlockNFT {
+  height : 350px;
+}
+
 .MgBlockProductBlockVariants {
-  height : 300px;
+  height : 250px;
   
 }
 .MgBlockProductBlockBuy {
