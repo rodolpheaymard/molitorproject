@@ -42,6 +42,7 @@ class MgBlockCollections extends MgComponent {
                <Col span={12}><MgBlockCollection key={(pair.right!==null ? pair.right.id : "none")} collection={pair.right}/></Col>
               </Row>
     });
+    
     return (<div className='MgBlockCollections'><Title level={3}>Collections</Title>
                {listCollections}
             </div>  );

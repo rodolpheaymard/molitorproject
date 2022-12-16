@@ -131,6 +131,7 @@ body {
   text-align: right;
   align-items: flex-end;
   padding: 20px 10px 0px 50px;
+  height: 400px;
 }
 
 
@@ -158,6 +159,7 @@ body {
   font-size: xx-large;
   font-weight: bold;
 }
+
 
 .MgButton   {
   background-color: black;
@@ -195,4 +197,15 @@ body {
 .MgBlockCollectionText {
   padding: 60px 10px 10px 10px ;
   width : 80%
+}
+
+.MgBlockProductBlockNFT {
+  height : 400px;
+}
+.MgBlockProductBlockVariants {
+  height : 300px;
+  
+}
+.MgBlockProductBlockBuy {
+  height : 250px;  
 }

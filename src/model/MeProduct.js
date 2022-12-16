@@ -26,7 +26,7 @@ export class MeProduct extends Me
    {
      let result = [];
      MtToArray(this.variants).forEach(element => {
-      if (element.isPhysical())
+      if (element.isPhysical() && element.stock_current > 0)
         result.push(element);
      });
 
@@ -37,7 +37,7 @@ export class MeProduct extends Me
    {
       let result = [];
       MtToArray(this.variants).forEach(element => {
-       if (element.isDigital())
+       if (element.isDigital()&& element.stock_current > 0)
          result.push(element);
       });
  
