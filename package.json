@@ -40,17 +40,5 @@
   },
   "devDependencies": {
     "json-loader": "^0.5.7"
-  },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "config-overrides.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rodolpheaymard/molitorproject.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rodolpheaymard/molitorproject/issues"
-  },
-  "homepage": "https://github.com/rodolpheaymard/molitorproject#readme"
+  }
 }
