@@ -1,6 +1,8 @@
 import './index.css';
 import './assets/css/Mg.css';
 //import 'antd/dist/antd.css';
+import 'antd/dist/reset.css';
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
