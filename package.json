@@ -5,15 +5,14 @@
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "antd": "^4.23.5",
-    "html-react-parser": "^3.0.4",
+    "antd": "^5.2.0",
+    "html-react-parser": "^3.0.8",
     "react": "^18.2.0",
     "react-app-rewired": "^2.2.1",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.4.2",
-    "react-scripts": "^2.1.3",
-    "web-vitals": "^2.1.4"
+    "react-router-dom": "^6.8.1",
+    "react-scripts": "^2.1.8",
+    "web-vitals": "^3.1.1"
   },
   "scripts": {
     "start": "react-app-rewired start",
@@ -41,5 +40,17 @@
   },
   "devDependencies": {
     "json-loader": "^0.5.7"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "config-overrides.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodolpheaymard/molitorproject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodolpheaymard/molitorproject/issues"
+  },
+  "homepage": "https://github.com/rodolpheaymard/molitorproject#readme"
 }
