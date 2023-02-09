@@ -155,6 +155,20 @@ body {
   align-self: center;
 }
 
+.MgBlockArtistNews {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start; /* align horizontal */
+  align-items: flex-start; /* align vertical */  
+ 
+}
+
+.MgBlockArtistNews .ant-card-head {
+  background-color: rgba(241, 239, 239);
+  width: 100%;
+ 
+}
+
 .MgTitle{
   font-size: xx-large;
   font-weight: bold;

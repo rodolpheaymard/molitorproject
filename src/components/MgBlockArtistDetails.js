@@ -2,8 +2,7 @@ import React from 'react';
 import { withRouter } from "./withRouter";
 import MgComponent from './MgComponent';
 import { MtIsNull } from '../utils/MtTools';
-//import { Typography , Col, Row } from 'antd';
-//const { Title } = Typography;
+import MgBlockArtistNewsList from './MgBlockArtistNewsList';
 
 
 class MgBlockArtistDetails extends MgComponent {
@@ -25,6 +24,10 @@ class MgBlockArtistDetails extends MgComponent {
         <div className='MgVertical MgAlignLeft MgTitle'>{this.artist.GetFullName()}</div>
         <div className='MgVertical MgAlignRight'>-</div>        
         <div className='MgVertical MgAlignLeft'>{this.artist.short_description}</div>
+        <br/>
+        <br/>
+        <br/>
+        <div className='MgVertical MgAlignLeft'><MgBlockArtistNewsList  artist={this.artist}/> </div>
     </div>  );
   }
 }

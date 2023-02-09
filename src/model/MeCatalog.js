@@ -6,7 +6,7 @@ import { MeProduct } from './MeProduct';
 import { MeProductVariant } from './MeProductVariant';
 import { MeMedia } from './MeMedia';
 import { MeCategory } from './MeCategory';
-import { MtIsNotNull , MtIsNull , MtToArray } from '../utils/MtTools';
+import { MtIsNotNull , MtIsNull , MtToDate} from '../utils/MtTools';
 import { MeCollectionDetail } from './MeCollectionDetail';
 import { Me } from './Me';
 
@@ -23,70 +23,79 @@ export class MeCatalog
 
    Init()
    {
-     this.allartists = {};
+     this.allartists = new Map();
+     this.allcategories = new Map();
+     this.allproducts = new Map();
+     this.allcontents = new Map();
+     this.allvariants = new Map();
+     this.allcontents_lists = new Map();
+  
+
      this.data.artists.forEach( elem => { 
-       this.allartists[elem.id] = new MeArtist(elem.id);
-       this.allartists[elem.id].first_name = elem.first_name;
-       this.allartists[elem.id].last_name = elem.last_name;
-       this.allartists[elem.id].country = elem.country;
-       this.allartists[elem.id].address1 = elem.address1;
-       this.allartists[elem.id].address2 = elem.address2;
-       this.allartists[elem.id].zipcode = elem.zipcode;
-       this.allartists[elem.id].city = elem.city;
-       this.allartists[elem.id].state = elem.state;
-       this.allartists[elem.id].short_description = elem.short_description;
-       this.allartists[elem.id].unknown = false;
+       let art = new MeArtist(elem.id);
+       this.allartists.set(elem.id, art);
+
+       art.first_name = elem.first_name;
+       art.last_name = elem.last_name;
+       art.country = elem.country;
+       art.address1 = elem.address1;
+       art.address2 = elem.address2;
+       art.zipcode = elem.zipcode;
+       art.city = elem.city;
+       art.state = elem.state;
+       art.short_description = elem.short_description;
+       art.unknown = false;
      });
 
-     this.allcategories = {};
-
-     this.allproducts = {};
      this.data.products.forEach( elem => { 
-      this.allproducts[elem.id] = new MeProduct(elem.id);
-      this.allproducts[elem.id].title = elem.title;
-      this.allproducts[elem.id].author_id = elem.author_id;
-      this.allproducts[elem.id].category_name = elem.category;      
+      let prd = new MeProduct(elem.id);
+      this.allproducts.set(elem.id,prd);
+      prd.title = elem.title;
+      prd.author_id = elem.author_id;
+      prd.category_name = elem.category;      
 
-      this.allproducts[elem.id].category = this.GetCategory(elem.category);  
-      this.allproducts[elem.id].category.AddProduct(this.allproducts[elem.id]);
+      prd.category = this.GetCategory(elem.category);  
+      prd.category.AddProduct(prd);
 
-      this.allproducts[elem.id].author = this.GetArtist(elem.author_id);      
+      prd.author = this.GetArtist(elem.author_id);      
+    });
+    
+    this.data.contents.forEach( elem => { 
+     let cont = new MeContent(elem.id);
+     this.allcontents.set(elem.id, cont);
+     cont.object_id = elem.object_id;
+     cont.object_type = elem.object_type;  
+     cont.template = elem.template;
+     cont.startdate = MtToDate(elem.startdate);
+     cont.enddate = MtToDate(elem.enddate);
+     cont.data = elem.data;
+     cont.Init(this);
     });
 
-    
-    this.allcontents = {};
-    this.data.contents.forEach( elem => { 
-     this.allcontents[elem.id] = new MeContent(elem.id);
-     this.allcontents[elem.id].object_id = elem.object_id;
-     this.allcontents[elem.id].object_type = elem.object_type;  
-     this.allcontents[elem.id].template = elem.template;
-     this.allcontents[elem.id].data = elem.data;
-   });
+    this.data.variants.forEach( elem => { 
+      let pv = new MeProductVariant(elem.id)
+      this.allvariants.set(elem.id, pv);
+      pv.product_id = elem.product_id;
+      pv.product_type = elem.product_type;
+      pv.physical_size = elem.physical_size;
+      pv.price_amount = elem.price_amount;      
+      pv.price_currency = elem.price_currency;      
+      pv.stock_current = elem.stock_current;      
+      pv.stock_total = elem.stock_total;      
+      pv.owner = elem.owner;      
 
-     this.allvariants = {};
-     this.data.variants.forEach( elem => { 
-      this.allvariants[elem.id] = new MeProductVariant(elem.id);
-      this.allvariants[elem.id].product_id = elem.product_id;
-      this.allvariants[elem.id].product_type = elem.product_type;
-      this.allvariants[elem.id].physical_size = elem.physical_size;
-      this.allvariants[elem.id].price_amount = elem.price_amount;      
-      this.allvariants[elem.id].price_currency = elem.price_currency;      
-      this.allvariants[elem.id].stock_current = elem.stock_current;      
-      this.allvariants[elem.id].stock_total = elem.stock_total;      
-      this.allvariants[elem.id].owner = elem.owner;      
-
-      this.allvariants[elem.id].product = this.GetProduct(elem.product_id);     
-      if (MtIsNotNull( this.allvariants[elem.id].product ))     
+      pv.product = this.GetProduct(elem.product_id);     
+      if (MtIsNotNull(pv.product))     
       {
-        this.allvariants[elem.id].product.variants[elem.id] = this.allvariants[elem.id];
+        pv.product.AddVariant(pv);
       } 
     });
 
-     this.allcontents_lists = {};
-     this.data.contents_lists.forEach( elem => { 
-      this.allcontents_lists[elem.id] = new MeContentsList(elem.id);
-      this.allcontents_lists[elem.id].title = elem.title;
-      this.allcontents_lists[elem.id].type = elem.type;
+    this.data.contents_lists.forEach( elem => { 
+      let cl = new MeContentsList(elem.id);
+      this.allcontents_lists.set(elem.id,cl);
+      cl.title = elem.title;
+      cl.type = elem.type;
     });
 
     this.data.collection_details.forEach( elem => { 
@@ -95,7 +104,7 @@ export class MeCatalog
       {
         var n = new MeCollectionDetail(elem.id);
         n.contents_list_id = elem.contents_list_id;
-        coll.contents[elem.id] = n;
+        coll.AddCollectionDetail(n);
         n.object_type = elem.object_type;
         n.object = this.GetObject(elem.object_id,elem.object_type);
         n.order = elem.order;
@@ -106,16 +115,12 @@ export class MeCatalog
 
 
      this.data.medias.forEach( elem => { 
-
       let obj = this.GetObject(elem.object_id, elem.object_type);
       if (MtIsNotNull(obj))
       {
         let medium = new MeMedia(elem.id);
         medium.object = obj;
-        if (MtIsNotNull(obj.medias))
-        {
-          obj.medias[elem.id] = medium;
-        }
+        obj.AddMedia(medium);
         medium.type = elem.type;
         medium.object_type = elem.object_type;
         medium.media_type = elem.media_type;
@@ -130,7 +135,7 @@ export class MeCatalog
 
    GetArtist(id)
    {
-    var result = this.allartists[id];
+    var result = this.allartists.get(id);
     if (MtIsNull(result))
     {
       result = new MeArtist("cat-"+id);
@@ -157,49 +162,51 @@ export class MeCatalog
    }
    GetProduct(id)
    {
-     return this.allproducts[id];
+     return this.allproducts.get(id);
    }
    
    GetVariant(id)
    {
-     return this.allvariants[id];
+     return this.allvariants.get(id);
    }
    
    GetContent(id)
    {
-     return this.allcontents[id];
+     return this.allcontents.get(id)
    }
    
    GetContentsList(id)
    {
-     return this.allcontents_lists[id];
+     return this.allcontents_lists.get(id);
    }
 
    GetCategory(name)
    {
-     var result = this.allcategories[name];
+     var result = this.allcategories.get(name);
      if (MtIsNull(result))
      {
       result = new MeCategory("cat-"+name);
       result.name = name;
-      this.allcategories[name] = result;
+      this.allcategories.set(name, result);
      }
      return result;
    }
    
    GetArtistsList()
    {
-     return this.allartists;
+    let result= [];
+    this.allartists.forEach(  (c) => {   result.push(c); });
+    return result;
    }
 
    GetCollections()
    {
     let result= [];
-    MtToArray(this.allcontents_lists).forEach(  (c) => { 
+    this.allcontents_lists.forEach(  (c) => { 
       if (c.type === Me.COLLECTION
           && c.id !== Me.HOME_ID)
       {
-        result.push(c);;
+        result.push(c);
       }
     });
 
@@ -209,14 +216,10 @@ export class MeCatalog
    GetObjectsList(collectionId)
    {
        let result  = [];   
-       MtToArray(this.allcontents_lists).forEach( elem => { 
-        if (elem.id === collectionId)
+       this.allcontents_lists.forEach( (val, id) => { 
+        if (val.id === collectionId)
          {
-           MtToArray(elem.contents).forEach( e => {
-            if (MtIsNotNull(e.object))
-            {
-              result.push(e.object);
-            }});
+           result = val.GetObjectsList(Me.ANY) 
           } 
        });
        return result;

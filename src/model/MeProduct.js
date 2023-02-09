@@ -1,31 +1,27 @@
-import { MtIsNotNull,MtToArray } from "../utils/MtTools";
 import { Me } from "./Me";
-import { MeMedia } from "./MeMedia";
+
 
 export class MeProduct extends Me
 {
    constructor(id) 
    {  
     super(id);
-    this.variants = {};
+    this.variants = new Map();
    }
    
-   GetMediaUrl()
-   {
-      let result = MeMedia.GetDefaultImageUrl();
 
-      let imgs = MtToArray(this.medias);
-      if (MtIsNotNull(imgs) && imgs.length > 0 )
-      {         
-         result = imgs[0].GetMediaUrl();
-      }
-      return result;      
+   AddVariant(prodVar)
+   {
+     if (this.variants.has(prodVar.id) === false)
+     {
+       this.variants.set(prodVar.id,prodVar);
+     }
    }
 
    tabPhysicalVariants()
    {
      let result = [];
-     MtToArray(this.variants).forEach(element => {
+     this.variants.forEach( (element, id) => {
       if (element.isPhysical() && element.stock_current > 0)
         result.push(element);
      });
@@ -36,7 +32,7 @@ export class MeProduct extends Me
    tabDigitalVariants()
    {
       let result = [];
-      MtToArray(this.variants).forEach(element => {
+      this.variants.forEach( (element, id) =>  {
        if (element.isDigital()&& element.stock_current > 0)
          result.push(element);
       });

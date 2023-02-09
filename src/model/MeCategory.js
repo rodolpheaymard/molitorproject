@@ -6,11 +6,14 @@ export class MeCategory extends Me
     constructor(id)
     {
         super(id);
-        this.products = {};
+        this.products = new Map();
     }
 
     AddProduct(product)
     {
-        this.products[product.id] = product;
+        if (this.products.has(product.id) === false)
+        {
+          this.products.set(product.id,product);
+        }
     }
 }

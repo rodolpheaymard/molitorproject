@@ -1,6 +1,5 @@
-import { MtIsNotNull, MtToArray } from "../utils/MtTools";
 import { Me } from "./Me";
-import { MeMedia } from "./MeMedia";
+import { MtIsNotNull } from "../utils/MtTools";
 
 
 export class MeArtist extends Me
@@ -8,23 +7,47 @@ export class MeArtist extends Me
     constructor(id)
     {
         super(id);
-        this.products = {};
-    }
-
-    GetMediaUrl()
-    {
-       let result = MeMedia.GetDefaultImageUrl();
- 
-       let imgs = MtToArray(this.medias);
-       if (MtIsNotNull(imgs) && imgs.length > 0 )
-       {         
-          result = imgs[0].GetMediaUrl();
-       }
-       return result;      
+        this.products = new Map();
+        this.contents = new Map();
     }
 
     GetFullName()
     {
         return this.first_name + " " + this.last_name;
+    }
+
+    AddContent(content)
+    {
+      if (this.contents.has(content.id) === false)
+      {
+        this.contents.set(content.id,content);
+      }
+    }
+
+    GetContents()
+    {
+        let result = [];
+        this.contents.forEach( (element, id) => {
+            result.push(element);
+         });
+        result.sort(function(a, b) { 
+                                      if (MtIsNotNull(a.startdate) && MtIsNotNull(b.startdate) )
+                                      {
+                                        if ( a.startdate > b.startdate)
+                                          return 1;
+                                        else 
+                                          return -1;
+                                      }
+                                      if (MtIsNotNull(a.startdate))
+                                      {
+                                        return 1;
+                                      }
+                                      if (MtIsNotNull(b.startdate))
+                                      {
+                                        return -1;
+                                      }
+                                      return 0;
+                                    });
+        return result;
     }
 }

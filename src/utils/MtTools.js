@@ -1,6 +1,4 @@
 
-
-
 export function MtIsNotNull(obj)
 {
    return obj !== null  &&  typeof obj !== 'undefined' ;
@@ -65,3 +63,19 @@ export function MtToNupletArray(obj, nb)
    return result;
 }
 
+export function MtToDate(txtval)
+{
+   if (MtIsNull(txtval))
+     return null;
+
+   const lst = txtval.split('/');
+   if (lst.length === 3)
+   {
+      let result = new Date();
+      result.setYear(parseInt(lst[0]));
+      result.setMonth(parseInt(lst[1])-1);
+      result.setDate(parseInt(lst[2]));
+      return result;
+   }
+   return null;
+}

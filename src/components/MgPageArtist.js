@@ -1,5 +1,4 @@
 import React from 'react';
-//import { Typography } from 'antd';
 import { Col, Row } from 'antd';
 import MgComponent from './MgComponent';
 import MgBlockHeader from './MgBlockHeader';
@@ -7,8 +6,6 @@ import MgBlockArtist from './MgBlockArtist';
 import MgBlockArtistDetails from './MgBlockArtistDetails';
 import MgBlockFooter from './MgBlockFooter';
 import { withRouter } from './withRouter';
-
-//const { Title } = Typography;
 
 
 class MgPageArtist extends MgComponent {
@@ -37,8 +34,12 @@ class MgPageArtist extends MgComponent {
 
   desktopRender() {
     return (<><Row><Col span={24}><MgBlockHeader /></Col></Row>
-    <Row><Col span={6}><MgBlockArtist artist={this.artist}/> </Col>
-        <Col span={18}> <MgBlockArtistDetails artist={this.artist}/> </Col>  </Row>
+    <Row><Col span={6}>
+           <MgBlockArtist artist={this.artist}/> 
+         </Col>
+         <Col span={18}> 
+         <MgBlockArtistDetails artist={this.artist}/> 
+         </Col>  </Row>
     <Row><Col span={24}><MgBlockFooter /></Col></Row></> );
   }
 
