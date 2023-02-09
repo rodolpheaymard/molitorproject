@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import { withRouter } from './withRouter';
-import 'antd/dist/antd.css';
 import MgComponent from './MgComponent';
 import { MtIsNotNull, MtToArray, MtToPairArray } from '../utils/MtTools';
 import { Col, Row } from 'antd';
