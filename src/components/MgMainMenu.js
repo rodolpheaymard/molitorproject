@@ -4,8 +4,7 @@ import { Menu } from 'antd';
 import { withRouter } from "./withRouter";
 import MgComponent from './MgComponent';
 
-// import { Layout } from 'antd';
-// import Sider from 'antd/lib/layout/Sider';
+;
 
 
 class MgMainMenu extends MgComponent {

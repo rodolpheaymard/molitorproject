@@ -3,8 +3,7 @@ import { withRouter } from "./withRouter";
 import MgComponent from './MgComponent';
 import { MtIsNull } from '../utils/MtTools';
 import { Cascader } from 'antd';
-//import { Typography , Col, Row } from 'antd';
-//const { Title } = Typography;
+
 
 
 class MgBlockProductDetails extends MgComponent {

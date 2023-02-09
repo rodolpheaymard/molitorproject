@@ -1,6 +1,5 @@
 import React from 'react';
 import { withRouter } from './withRouter';
-import 'antd/dist/antd.css';
 import MgComponent from './MgComponent';
 import { Typography, Col, Row } from 'antd';
 import MgBlockCollection from './MgBlockCollection';

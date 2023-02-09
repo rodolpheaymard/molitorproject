@@ -1,7 +1,6 @@
 import React from 'react';
 import { withRouter } from "./withRouter";
 import MgComponent from './MgComponent';
-import 'antd/dist/antd.css';
 import { Col, Row } from 'antd';
 import { MtIsNull, MtToArray } from '../utils/MtTools';
 import { Me } from '../model/Me';

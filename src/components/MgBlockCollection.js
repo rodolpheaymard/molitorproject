@@ -1,7 +1,6 @@
 import React from 'react';
 import { withRouter } from "./withRouter";
 import MgComponent from './MgComponent';
-import 'antd/dist/antd.css';
 import { Row, Col, Typography  } from 'antd';
 import { MtIsNull } from '../utils/MtTools';
 const { Title } = Typography;

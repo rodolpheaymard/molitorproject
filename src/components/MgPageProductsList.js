@@ -1,12 +1,11 @@
 import React from 'react';
 import MgComponent from './MgComponent';
 import MgBlockHeader from './MgBlockHeader';
-//import { Typography } from 'antd';
 import { Col, Row } from 'antd';
 import { withRouter } from './withRouter';
 import { Me } from '../model/Me';
 import MgBlockProductsList from './MgBlockProductsList';
-//const { Title } = Typography;
+
   
  
 

@@ -1,7 +1,5 @@
 import React from 'react';
 import { withRouter } from './withRouter';
-import 'antd/dist/antd.css';
-//import { Col, Row } from 'antd';
 import MgBlockProductsList  from './MgBlockProductsList';
 import MgComponent from './MgComponent';
 import { Me } from '../model/Me';

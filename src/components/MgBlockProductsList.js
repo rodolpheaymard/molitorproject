@@ -1,7 +1,6 @@
 import React from 'react';
 import { withRouter } from './withRouter';
 import { Fragment } from 'react';
-import 'antd/dist/antd.css';
 import { MtIsNotNull, MtToNupletArray } from '../utils/MtTools';
 import { Col, Row } from 'antd';
 import MgBlockProduct from './MgBlockProduct';
