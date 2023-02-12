@@ -3118,10 +3118,10 @@
       "type": "content",
       "object_id": "art-anne_turlais",
       "object_type": "artist",
-      "template": "simple_text",
+      "template": "html",
       "startdate": "",
       "enddate": "",
-      "data": "I created my first painting at 14 to offer it to my dying grandfather. That was the starting point of my creative journey. By offering, I have received.\nThis work of art was my first and only figurative painting: the dovecote of my parent’s farm. This founding act introduced me to the language of color with which I transcribed the subject’s perspective. It appeared to me as natural, simple, joyful, and intense.\nThe first question that came to me in the act of creation was related to what I was going to paint. The response was immediate. Attracted from a young age by the unseen and the important place it already had in my life, I was going to paint what is not seen but which strongly exists, in us and around us.\n\nSince then, three axes determine my creative line:  Light, Space, Openness. \n\nA peculiarity of mine is that I have been in contact with other artistic expressions only late in my career. Having for a long time lived isolated in an environment outside culture but surrounded by nature, it has been and remains my source, my great master. \nI thus carried out my researches with regards to pictorial, matter, and meaning for the first 14 years, without any direct influence.\nMy first artistic encounter was when I discovered the work of Turner, at the age of 17, during a brief stay in London.\nAfter my first personal exhibition at the age of 28, “Il faut laisser le temps au temps” in Figeac, and my first sale during an exhibition organized at the church of Saint-Cirq Lapopie, I decided to learn Intaglio Printmaking. \nI have been taught this very specialized profession in the studio of Tanguy Garric. This allowed me to be in contact with various and contemporary expressions of artists such as Earnest Pignon-Ernest, Pincemin, Dawan, Texier, Garouste, Grosborne, Morellet…\nIt was also at the start of my stay in Paris, which was initially supposed to last only a year, that I discovered Joseph Sima’s work and my apparent “connection” with this painter. \nAfter establishing my first engraving and painting workshops in Montreuil and Paris from 1998 to 2001, I continued my career as a painter by settling at the birth of my son in Saint-Cirq Lapopie from 2001 to 2017, as well as Cabrerets from 2009, located at the feet of the world-renowned ‘Pech-Merle’ cave ornamented with prehistoric frescoes.\nI like to see a certain affinity, if not a resonance, between the finger technique used by the authors of these frescoes, the engraving technique, and the one that I unexpectedly discovered in late 2014, when I began painting on the iPad Pro.\nI have been immediately sold by this creative digital tool with which I rediscovered my first gestures as a painter when I deposited the pigments mixed with oil with my fingers on the canvases that I mounted on wood.\nI was also fascinated by its potential, and I very quickly envisioned the project of creating one painting per day for 365 days on the digital tablet and sharing it daily. I sent them daily by email to about 500 amateurs, and to my great delight, they have very well received this new approach to art.\nThrough this project, my vision was to provide a window of light by leveraging existing screens in places where art has difficulty entering (hospitals, prisons, nursing homes…) and where it could nevertheless bring comfort and well-being.\n"
+      "data": "<p>I created my first painting at 14 to offer it to my dying grandfather. That was the starting point of my creative journey. By offering, I have received.\nThis work of art was my first and only figurative painting: the dovecote of my parent’s farm. This founding act introduced me to the language of color with which I transcribed the subject’s perspective. It appeared to me as natural, simple, joyful, and intense.\n<br/>\nThe first question that came to me in the act of creation was related to what I was going to paint. The response was immediate. Attracted from a young age by the unseen and the important place it already had in my life, I was going to paint what is not seen but which strongly exists, in us and around us.\n</p>\n\n<p>Since then, three axes determine my creative line:  Light, Space, Openness. </p>\n\n<p>A peculiarity of mine is that I have been in contact with other artistic expressions only late in my career. Having for a long time lived isolated in an environment outside culture but surrounded by nature, it has been and remains my source, my great master. <br/>\nI thus carried out my researches with regards to pictorial, matter, and meaning for the first 14 years, without any direct influence. <br/>\nMy first artistic encounter was when I discovered the work of Turner, at the age of 17, during a brief stay in London. <br/>\nAfter my first personal exhibition at the age of 28, “Il faut laisser le temps au temps” in Figeac, and my first sale during an exhibition organized at the church of Saint-Cirq Lapopie, I decided to learn Intaglio Printmaking. <br/>\nI have been taught this very specialized profession in the studio of Tanguy Garric. This allowed me to be in contact with various and contemporary expressions of artists such as Earnest Pignon-Ernest, Pincemin, Dawan, Texier, Garouste, Grosborne, Morellet… <br/>\nIt was also at the start of my stay in Paris, which was initially supposed to last only a year, that I discovered Joseph Sima’s work and my apparent “connection” with this painter. \nAfter establishing my first engraving and painting workshops in Montreuil and Paris from 1998 to 2001, I continued my career as a painter by settling at the birth of my son in Saint-Cirq Lapopie from 2001 to 2017, as well as Cabrerets from 2009, located at the feet of the world-renowned ‘Pech-Merle’ cave ornamented with prehistoric frescoes.\nI like to see a certain affinity, if not a resonance, between the finger technique used by the authors of these frescoes, the engraving technique, and the one that I unexpectedly discovered in late 2014, when I began painting on the iPad Pro. <br/>\nI have been immediately sold by this creative digital tool with which I rediscovered my first gestures as a painter when I deposited the pigments mixed with oil with my fingers on the canvases that I mounted on wood. <br/>\nI was also fascinated by its potential, and I very quickly envisioned the project of creating one painting per day for 365 days on the digital tablet and sharing it daily. I sent them daily by email to about 500 amateurs, and to my great delight, they have very well received this new approach to art.\nThrough this project, my vision was to provide a window of light by leveraging existing screens in places where art has difficulty entering (hospitals, prisons, nursing homes…) and where it could nevertheless bring comfort and well-being.\n</p>"
     },
     {
       "id": "cnt-anne_turlais_02",
@@ -3131,7 +3131,7 @@
       "template": "simple_text",
       "startdate": "2020/06/01",
       "enddate": "",
-      "data": "New Exhibit this summer  July 25 to Aug 29 \n@Galeire ArtWave Cabrerets, France"
+      "data": "New Exhibit this summer  July 25 to Aug 29 \n@Galerie ArtWave Cabrerets, France"
     },
     {
       "id": "cnt-anne_turlais_03",
@@ -4007,8 +4007,8 @@
       "type": "customer",
       "login": "ZeKollector2020",
       "avatar": "",
-      "firstname": "",
-      "lastname": "",
+      "first_name": "",
+      "last_name": "",
       "country": "France",
       "city": "Toulouse"
     },
@@ -4017,8 +4017,8 @@
       "type": "customer",
       "login": "rodolf75",
       "avatar": "",
-      "firstname": "",
-      "lastname": "",
+      "first_name": "",
+      "last_name": "",
       "country": "France",
       "city": "Paris"
     },
@@ -4027,8 +4027,8 @@
       "type": "customer",
       "login": "baki42",
       "avatar": "",
-      "firstname": "",
-      "lastname": "",
+      "first_name": "",
+      "last_name": "",
       "country": "United Kingdom",
       "city": "London"
     },
@@ -4037,8 +4037,8 @@
       "type": "customer",
       "login": "alberthall",
       "avatar": "",
-      "firstname": "",
-      "lastname": "",
+      "first_name": "",
+      "last_name": "",
       "country": "Germany",
       "city": "Berlin"
     },
@@ -4047,8 +4047,8 @@
       "type": "customer",
       "login": "gallerylover",
       "avatar": "",
-      "firstname": "",
-      "lastname": "",
+      "first_name": "",
+      "last_name": "",
       "country": "France",
       "city": "Paris"
     },
@@ -4057,8 +4057,8 @@
       "type": "customer",
       "login": "xxx01",
       "avatar": "",
-      "firstname": "",
-      "lastname": "",
+      "first_name": "",
+      "last_name": "",
       "country": "",
       "city": ""
     },
@@ -4067,8 +4067,8 @@
       "type": "customer",
       "login": "xxx02",
       "avatar": "",
-      "firstname": "",
-      "lastname": "",
+      "first_name": "",
+      "last_name": "",
       "country": "",
       "city": ""
     },
@@ -4077,8 +4077,8 @@
       "type": "customer",
       "login": "xxx03",
       "avatar": "",
-      "firstname": "",
-      "lastname": "",
+      "first_name": "",
+      "last_name": "",
       "country": "",
       "city": ""
     },
@@ -4087,8 +4087,8 @@
       "type": "customer",
       "login": "xxx04",
       "avatar": "",
-      "firstname": "",
-      "lastname": "",
+      "first_name": "",
+      "last_name": "",
       "country": "",
       "city": ""
     },
@@ -4097,8 +4097,8 @@
       "type": "customer",
       "login": "xxx05",
       "avatar": "",
-      "firstname": "",
-      "lastname": "",
+      "first_name": "",
+      "last_name": "",
       "country": "",
       "city": ""
     },
@@ -4107,8 +4107,8 @@
       "type": "customer",
       "login": "xxx06",
       "avatar": "",
-      "firstname": "",
-      "lastname": "",
+      "first_name": "",
+      "last_name": "",
       "country": "",
       "city": ""
     },
@@ -4117,8 +4117,8 @@
       "type": "customer",
       "login": "xxx07",
       "avatar": "",
-      "firstname": "",
-      "lastname": "",
+      "first_name": "",
+      "last_name": "",
       "country": "",
       "city": ""
     },
@@ -4127,8 +4127,8 @@
       "type": "customer",
       "login": "xxx08",
       "avatar": "",
-      "firstname": "",
-      "lastname": "",
+      "first_name": "",
+      "last_name": "",
       "country": "",
       "city": ""
     },
@@ -4137,8 +4137,8 @@
       "type": "customer",
       "login": "xxx09",
       "avatar": "",
-      "firstname": "",
-      "lastname": "",
+      "first_name": "",
+      "last_name": "",
       "country": "",
       "city": ""
     },
@@ -4147,8 +4147,8 @@
       "type": "customer",
       "login": "xxx10",
       "avatar": "",
-      "firstname": "",
-      "lastname": "",
+      "first_name": "",
+      "last_name": "",
       "country": "",
       "city": ""
     },
@@ -4157,8 +4157,8 @@
       "type": "customer",
       "login": "xxx11",
       "avatar": "",
-      "firstname": "",
-      "lastname": "",
+      "first_name": "",
+      "last_name": "",
       "country": "",
       "city": ""
     },
@@ -4167,8 +4167,8 @@
       "type": "customer",
       "login": "xxx12",
       "avatar": "",
-      "firstname": "",
-      "lastname": "",
+      "first_name": "",
+      "last_name": "",
       "country": "",
       "city": ""
     },
@@ -4177,8 +4177,8 @@
       "type": "customer",
       "login": "xxx13",
       "avatar": "",
-      "firstname": "",
-      "lastname": "",
+      "first_name": "",
+      "last_name": "",
       "country": "",
       "city": ""
     },
@@ -4187,8 +4187,8 @@
       "type": "customer",
       "login": "xxx14",
       "avatar": "",
-      "firstname": "",
-      "lastname": "",
+      "first_name": "",
+      "last_name": "",
       "country": "",
       "city": ""
     },
@@ -4197,8 +4197,8 @@
       "type": "customer",
       "login": "xxx15",
       "avatar": "",
-      "firstname": "",
-      "lastname": "",
+      "first_name": "",
+      "last_name": "",
       "country": "",
       "city": ""
     }

@@ -2,7 +2,8 @@ import React from 'react';
 import { withRouter } from "./withRouter";
 import MgComponent from './MgComponent';
 import { MtIsNotNull } from '../utils/MtTools';
-import {  Card , Button } from 'antd';
+import {  Card  } from 'antd';
+import MgBlockContent from './MgBlockContent';
 
 
 
@@ -11,14 +12,17 @@ class MgBlockArtistNews extends MgComponent {
     super(props);
     this.state = { artist : props.artist,
                    content : props.content,
-                   showMore : false };
-
-    this.handleClick = this.handleClick.bind(this);
+                   title : "" };
   }
 
-  handleClick (event) {
-    this.setState( { showMore : !this.state.showMore });
-  };
+  
+  calcTitle()
+  {
+    if (MtIsNotNull(this.state.content.startdate))
+    {
+      this.setState( { title : this.state.content.startdate.toDateString()} );
+    }
+  }
 
   render() {
     
@@ -28,25 +32,10 @@ class MgBlockArtistNews extends MgComponent {
       titleStr = this.state.content.startdate.toDateString();
     }
 
-    let txtStr = this.state.content.data;
-    let showMore = <></>;
-    if (txtStr.length > 150)
-    {
-      if (this.state.showMore === false )
-      {
-        txtStr = txtStr.slice(0,100) + "...  " ;
-        showMore = <Button type="link" onClick={this.handleClick}> See More </Button>;
-       }
-      else 
-      {
-       showMore = <Button type="link" onClick={this.handleClick}> See Less </Button>;
-      }
-    }
 
     return (  <Card title={titleStr} key={this.state.content.id} className='MgBlockArtistNews MgVertical'>
-                   <p> {txtStr}{showMore}
-                   </p>
-                </Card>                
+                   <MgBlockContent content={this.state.content} showMore={true} />
+              </Card>                
             );
   }
 }

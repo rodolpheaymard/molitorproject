@@ -22,7 +22,7 @@ class MgBlockArtistNewsList extends MgComponent {
     if (MtIsNull(this.artist))
       return <></>;
 
-     let newsBlock = this.artists_contents.map((content) =>  { return <MgBlockArtistNews artist={this.artist} content={content} /> ;});
+     let newsBlock = this.artists_contents.map((content) =>  { return <MgBlockArtistNews artist={this.artist} content={content} key={content.id} /> ;});
 
     return ( <div className='MgBlockArtistNews MgVertical'>
               {newsBlock}

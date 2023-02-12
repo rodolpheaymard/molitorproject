@@ -1,25 +1,89 @@
 import React from 'react';
 import { withRouter } from "./withRouter";
 import MgComponent from './MgComponent';
-import { Col, Row } from 'antd';
-import { MtIsNull, MtToArray } from '../utils/MtTools';
+import { Col, Row , Button} from 'antd';
+import { MtIsNull } from '../utils/MtTools';
 import { Me } from '../model/Me';
-import { MeMedia } from '../model/MeMedia';
 import parse from 'html-react-parser';
 
 class MgBlockContent extends MgComponent {
   constructor(props) {
     super(props);
-    this.content = props.content;
+    this.state = {  content : props.content,                    
+                    showMore : props.showMore,
+                    showMoreOnOff : false,
+                    showMoreBtn : <></>,
+                    smallContent : "" };
+                    
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  componentDidMount()
+  {
+    this.calcShowMore(this.state.showMoreOnOff);
+  }
+  
+  componentDidUpdate(prevProps) {
+    if (this.props.content !== prevProps.content) 
+    {
+      this.calcShowMore(this.state.showMoreOnOff);
+    }
+  }
+  
+  
+  calcShowMore(newShow)
+  {
+    if (this.state.showMore === true)
+    {
+      let txtStr = this.state.content.data;
+      if (txtStr.length > 150)
+      {
+        if (newShow === false)
+        {
+          if (this.state.content.template === Me.TPL_HTML)
+          {
+            // html reduction   
+            let  bits = txtStr.split('>');
+            let  str = "";
+            for(let i=0 ; i< bits.length && str === ""; i++)
+            {
+               if (bits[i].length > 3 )
+               {
+                 str = bits[i].slice(0,100) + "...";
+               }
+            }
+            txtStr = "<p>"+str+"</p>";
+          }
+          else
+          {
+            // "simple_text"
+
+            txtStr = txtStr.slice(0,100) + "...  " ;
+          }
+          this.setState( { showMoreBtn : <Button type="link" onClick={this.handleClick}> See More </Button> } );
+        }
+        else 
+        {
+          this.setState( { showMoreBtn : <Button type="link" onClick={this.handleClick}> See Less </Button> } );
+        }   
+      }  
+      this.setState({smallContent : txtStr});
+    }
+  }
+
+  handleClick (event) {
+    let newShow = !this.state.showMoreOnOff;
+    this.setState( { showMoreOnOff : newShow});
+    this.calcShowMore(newShow);
   }
 
   render() {
-    if (MtIsNull(this.content))
+    if (MtIsNull(this.state.content))
       return <></>;
     
     
     let rdrContent = null;
-     switch(this.content.template)
+     switch(this.state.content.template)
      {
       case Me.TPL_SIMPLE_TEXT : rdrContent = this.rdrSimpleText(); break;
       case Me.TPL_HTML :  rdrContent = this.rdrHtml(); break;
@@ -32,13 +96,23 @@ class MgBlockContent extends MgComponent {
 
   rdrSimpleText()
   {
-    return <div className='MgBlockContent' key={this.content.id} >{this.content.data}</div>  ;
+    if (this.state.showMore === true)
+    {
+      return <div className='MgBlockContent' key={this.state.content.id}>{this.state.smallContent}{this.state.showMoreBtn}</div>  ;
+    }
+
+    return <div className='MgBlockContent' key={this.state.content.id}>{this.state.content.data}</div>  ;
   }
 
   rdrHtml()
   {
-    return <div key={this.content.id}> {parse(this.content.data)} </div>  ;
-  }
+    if (this.state.showMore === true)
+    {
+      return <div className='MgBlockContent' key={this.state.content.id}>{parse(this.state.smallContent)}{this.state.showMoreBtn}</div>  ;
+    }
+
+    return <div className='MgBlockContent' key={this.state.content.id} >{parse(this.state.content.data)}</div>  ;
+}
 
 
   rdrImg6Text18()
@@ -55,26 +129,22 @@ class MgBlockContent extends MgComponent {
   }
 
   desktopImg6Text18() {
-    return <div className='MgBlockContent' key={this.content.id}>
-      <Row><Col span={6}><img src={this.GetMedia(0).GetMediaUrl()} alt={this.GetMedia(0).alt_text}/></Col>
+    let cnt = this.state.content;
+    let imgurl = cnt.GetMediaUrl();
+    let imgalt = cnt.GetMediaAltText();
+ 
+    return <div className='MgBlockContent' key={cnt.id}>
+      <Row><Col span={6}><img src={imgurl} alt={imgalt}/></Col>
       <Col span={18}>{this.content.data}</Col></Row></div>  ;
   }
 
   mobileImg6Text18() {
-    return <div className='MgBlockContent' key={this.content.id}>
-    <Row><Col>{this.GetMedia(0)}</Col></Row>
-    <Row><Col span={18}>{this.content.data}</Col></Row></div>  ;
-  }
-
-  
-  GetMedia(idx)
-  {
-    let imgs = MtToArray(this.medias);
-    if (imgs.length > 0)
-    {
-      return imgs[idx];
-    }
-    return MeMedia.GetDefaultImage();
+    let cnt = this.state.content;
+    let imgurl = cnt.GetMediaUrl();
+    let imgalt = cnt.GetMediaAltText();
+    return <div className='MgBlockContent' key={cnt.id}>
+      <Row><Col><img src={imgurl} alt={imgalt}/></Col></Row>
+      <Row><Col>{this.content.data}</Col></Row></div>  ;
   }
 }
 

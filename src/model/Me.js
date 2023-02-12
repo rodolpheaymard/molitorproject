@@ -1,3 +1,4 @@
+import { MtIsNotNull } from "../utils/MtTools";
 
 export class Me
 {
@@ -44,14 +45,28 @@ export class Me
         
     GetMediaUrl()
     {
-    let result = Me.GetDefaultImageUrl();
+      let result = Me.GetDefaultImageUrl();
 
-    if (this.medias.size > 0 )
-    {         
+      if (this.medias.size > 0 )
+      {         
         let img = this.medias.values().next().value;
         result = img.GetMediaUrl();
+      }
+      return result;      
     }
-    return result;      
+
+    GetMediaAltText()
+    {
+      let result = "photo";
+      if (this.medias.size > 0 )
+      {         
+        let img = this.medias.values().next().value;
+        if (MtIsNotNull( img.alt_text ))
+        {
+          result = img.alt_text;
+        }
+      }
+      return result;
     }
 
 }
