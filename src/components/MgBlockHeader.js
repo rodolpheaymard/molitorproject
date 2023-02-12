@@ -8,8 +8,8 @@ import { withRouter } from './withRouter';
 class MgBlockHeader extends MgComponent {
  
   render() {
-    return (<> <Row className="MgBlockHeader"><Col span={4} align="middle"><MgLogo/></Col>
-                    <Col span={18}></Col>
+    return (<> <Row className="MgBlockHeader"><Col span={8} align="middle"><MgLogo/></Col>
+                    <Col span={14}></Col>
                     <Col span={2}><MgMainMenu /></Col>
                 </Row></>);
   }
