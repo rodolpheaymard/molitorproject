@@ -36,7 +36,7 @@ class MgBlockContent extends MgComponent {
     if (this.state.showMore === true)
     {
       let txtStr = this.state.content.data;
-      if (txtStr.length > 150)
+      if (txtStr.length > Me.TEXT_MIN_LENGTH)
       {
         if (newShow === false)
         {
@@ -49,7 +49,7 @@ class MgBlockContent extends MgComponent {
             {
                if (bits[i].length > 3 )
                {
-                 str = bits[i].slice(0,100) + "...";
+                 str = bits[i].slice(0,Me.TEXT_MIN_LENGTH) + "...";
                }
             }
             txtStr = "<p>"+str+"</p>";
@@ -58,7 +58,7 @@ class MgBlockContent extends MgComponent {
           {
             // "simple_text"
 
-            txtStr = txtStr.slice(0,100) + "...  " ;
+            txtStr = txtStr.slice(0,Me.TEXT_MIN_LENGTH) + "...  " ;
           }
           this.setState( { showMoreBtn : <Button type="link" onClick={this.handleClick}> See More </Button> } );
         }

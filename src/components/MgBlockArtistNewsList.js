@@ -10,12 +10,8 @@ class MgBlockArtistNewsList extends MgComponent {
     super(props);
     this.artist = props.artist;
     this.artists_contents = this.artist.GetContents();
-    this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick (event) {
-   // this.props.router.navigate("/"+ this.artist.id);   
-  };
 
   render() {
     

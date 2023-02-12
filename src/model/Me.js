@@ -18,6 +18,8 @@ export class Me
     static TPL_HTML = "html";
     static TPL_IMAGE6_TEXT18 = "img6_text18";
 
+    static TEXT_MIN_LENGTH = 200;
+
     static GetRootDir()
     {
        return "/images/catalog";

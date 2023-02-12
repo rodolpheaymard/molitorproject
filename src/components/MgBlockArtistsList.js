@@ -49,7 +49,7 @@ class MgBlockArtistsList extends MgComponent {
         // rendu sur 1 colonne    
         let tabarts = MtToArray(this.artists);
         const listArtists = tabarts.map((art) => {
-            return  <Row><Col span={24}><MgBlockArtist key={art.id} artist={art}/></Col></Row>
+            return  <Row key={art.id}><Col span={24}><MgBlockArtist key={art.id} artist={art}/></Col></Row>
           });
           return listArtists;
      
