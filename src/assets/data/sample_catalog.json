@@ -3024,7 +3024,7 @@
       "data": ""
     },
     {
-      "id": "cnt-home-before",
+      "id": "cnt-home-before-eng",
       "type": "content",
       "object_id": "",
       "object_type": "",
@@ -3032,6 +3032,16 @@
       "startdate": "",
       "enddate": "",
       "data": "<div style=\"padding-left:60px;padding-right:50px;padding-top:20px;padding-bottom:20px;\">\n<h2>MegalArt is a Gallery dedicated to Digital Arts</h2>\n<h3> … opened to any Kind of Digital Experiences </h3></div> "
+    },
+    {
+      "id": "cnt-home-before",
+      "type": "content",
+      "object_id": "",
+      "object_type": "",
+      "template": "html",
+      "startdate": "",
+      "enddate": "",
+      "data": "<div style=\"padding-left:60px;padding-right:50px;padding-top:20px;padding-bottom:20px;\">\n<h2>Ce site est dédié à l’Art Numérique</h2>\n<h3>Dans ce lieu de découverte et de rencontre avec les créateurs de ce monde en plein devenir, le visiteur chemine à travers diverses formes d’expression que le numérique offre à l’art. Il voit, s’informe, discute, s’approprie …  </h3>\n<div style=\"display: flex;  align-items: right;  justify-content: right;\"><i>L’art est à l’homme ce que la nature est à Dieu.</i> </div>\n<div style=\"display: flex;  align-items: right;  justify-content: right;\"><i>- Victor Hugo</i></div>\n</div> "
     },
     {
       "id": "cnt-home-aims",
